@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getApolloClient } from '@/lib/apollo';
 import { GET_ALL_POST_SLUGS, GET_CATEGORIES, GET_TAGS, GET_USERS } from '@/lib/queries';
+import { getPortfolioProjects } from '@/data/portfolio';
 
 const BASE_URL = 'https://blog.thnkandgrow.com';
 
@@ -20,6 +21,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const categories = categoriesResult.data?.categories?.nodes || [];
     const tags = tagsResult.data?.tags?.nodes || [];
     const users = usersResult.data?.users?.nodes || [];
+
+    // Get portfolio projects
+    const portfolioProjects = getPortfolioProjects();
 
     // Post pages
     const postPages = posts.map((post: any) => ({
@@ -53,6 +57,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     }));
 
+    // Portfolio pages
+    const portfolioListingPage = {
+      url: `${BASE_URL}/portfolio`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    };
+
+    const portfolioPages = portfolioProjects.map((project) => ({
+      url: `${BASE_URL}/portfolio/${project.slug}`,
+      lastModified: new Date(project.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    }));
+
     return [
       {
         url: BASE_URL,
@@ -60,6 +79,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         changeFrequency: 'daily',
         priority: 1,
       },
+      portfolioListingPage,
+      ...portfolioPages,
       ...postPages,
       ...categoryPages,
       ...tagPages,

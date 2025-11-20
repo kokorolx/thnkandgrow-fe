@@ -10,9 +10,29 @@ import styles from '../../archive.module.css';
 export const revalidate = 3600;
 
 export async function generateStaticParams() {
-  // Return empty array to generate all pages on-demand
-  return [];
+  const client = getApolloClient();
+
+  try {
+    const { data } = await client.query({
+      query: GET_TAGS,
+      variables: { first: 100 },
+      context: {
+        fetchOptions: {
+          next: { revalidate: 3600 }
+        }
+      }
+    }) as any;
+
+    return data?.tags?.nodes?.map((tag: any) => ({
+      slug: tag.slug,
+    })) ?? [];
+  } catch (error) {
+    console.error('Error fetching tag slugs for static generation:', error);
+    // Return empty array on error to allow build to continue
+    return [];
+  }
 }
+
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;

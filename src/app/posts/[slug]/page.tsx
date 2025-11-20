@@ -1,5 +1,5 @@
 import { getApolloClient } from '@/lib/apollo';
-import { GET_POST_BY_SLUG, GET_ALL_POSTS, GET_RECENT_POSTS } from '@/lib/queries';
+import { GET_POST_BY_SLUG, GET_ALL_POSTS, GET_RECENT_POSTS, GET_ALL_POST_SLUGS } from '@/lib/queries';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -17,10 +17,28 @@ export const revalidate = 3600;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  // Return empty array to generate all pages on-demand
-  // This prevents build failures when the GraphQL API is unavailable
-  return [];
+  const client = getApolloClient();
+
+  try {
+    const { data } = await client.query({
+      query: GET_ALL_POST_SLUGS,
+      context: {
+        fetchOptions: {
+          next: { revalidate: 3600 }
+        }
+      }
+    }) as any;
+
+    return data?.posts?.nodes?.map((post: any) => ({
+      slug: post.slug,
+    })) ?? [];
+  } catch (error) {
+    console.error('Error fetching post slugs for static generation:', error);
+    // Return empty array on error to allow build to continue
+    return [];
+  }
 }
+
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
