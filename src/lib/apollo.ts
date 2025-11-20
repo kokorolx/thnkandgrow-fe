@@ -10,7 +10,10 @@ const createApolloClient = (): ApolloClient => {
 
   const httpLink = new HttpLink({
     uri: process.env.WORDPRESS_API_URL || 'https://blog.thnkandgrow.com/graphql',
-    headers,
+    headers: {
+      ...headers,
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+      },
   });
 
   return new ApolloClient({
