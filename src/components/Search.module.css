@@ -1,0 +1,49 @@
+.form {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-color);
+  border-radius: 0;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-bottom-color: var(--accent-color);
+}
+
+.input::placeholder {
+  color: var(--text-color-secondary);
+  font-weight: 400;
+}
+
+.submitButton {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color-secondary);
+  transition: color 0.2s ease;
+}
+
+.submitButton:hover {
+  color: var(--accent-color);
+}

@@ -1,0 +1,240 @@
+.container {
+  margin: 48px 0;
+  padding: 24px;
+  background: var(--background-alt);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .controls {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.playControls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.playButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 980px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.playButton:hover {
+  background: #0051d5;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+}
+
+.playButton:active {
+  transform: translateY(0);
+}
+
+.controlButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.controlButton:hover {
+  background: var(--background-alt);
+  border-color: var(--text-color-secondary);
+  transform: scale(1.05);
+}
+
+.controlButton:active {
+  transform: scale(0.95);
+}
+
+.secondaryControls {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.progressContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progressBar {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: var(--border-color);
+  border-radius: 2px;
+  outline: none;
+  background-image: linear-gradient(var(--accent-color), var(--accent-color));
+  background-repeat: no-repeat;
+}
+
+.progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s;
+}
+
+.progressBar::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.timeLabels {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  color: var(--text-color-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.speedControl {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.speedControl label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.speedButtons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.speedButton {
+  padding: 6px 12px;
+  background: transparent;
+  color: var(--text-color-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 48px;
+}
+
+.speedButton:hover {
+  background: var(--background-alt);
+  border-color: var(--text-color-secondary);
+}
+
+.speedButton.active {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+.speedButton.active:hover {
+  background: #0051d5;
+  border-color: #0051d5;
+}
+
+.mainControls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.voiceSelectWrapper {
+  position: relative;
+}
+
+.voiceSelect {
+  appearance: none;
+  padding: 8px 32px 8px 12px;
+  background: var(--background-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  max-width: 200px;
+  text-overflow: ellipsis;
+}
+
+.voiceSelect:hover {
+  border-color: var(--text-color-secondary);
+}
+
+.voiceSelect:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.2);
+}
+
+.voiceSelectWrapper::after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--text-color-secondary);
+  border-bottom: 2px solid var(--text-color-secondary);
+  transform: translateY(-65%) rotate(45deg);
+  pointer-events: none;
+}
+
+.unsupported {
+  margin: 48px 0;
+  padding: 24px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.unsupported p {
+  color: #856404;
+  font-size: 14px;
+  margin: 0;
+}

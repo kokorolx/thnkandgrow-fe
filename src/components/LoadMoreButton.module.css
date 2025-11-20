@@ -1,0 +1,35 @@
+.loadMoreContainer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 40px;
+}
+
+.loadMoreButton {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-color);
+  background-color: transparent;
+  border: 2px solid var(--border-color);
+  border-radius: 980px;
+  padding: 12px 32px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 160px;
+}
+
+.loadMoreButton:hover:not(:disabled) {
+  background-color: var(--background-alt);
+  border-color: var(--text-color-secondary);
+  transform: translateY(-1px);
+}
+
+.loadMoreButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.loadMoreButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

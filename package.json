@@ -3,20 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "warm-cache": "node scripts/warm-cache.mjs",
+    "build:warm": "npm run build && npm run warm-cache"
   },
   "dependencies": {
+    "@apollo/client": "^3.11.11",
+    "graphql": "^16.10.0",
     "next": "16.0.3",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.2.3",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
     "typescript": "^5"
