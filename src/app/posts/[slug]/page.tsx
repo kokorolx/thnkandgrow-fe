@@ -10,8 +10,8 @@ import StructuredData from '@/components/StructuredData';
 import { calculateReadingTime } from '@/lib/utils';
 import styles from './page.module.css';
 
-// Revalidate every hour
-export const revalidate = 3600;
+// Revalidate every 7 days
+export const revalidate = 604800;
 
 // Generate other pages on-demand
 export const dynamicParams = true;
@@ -24,7 +24,7 @@ export async function generateStaticParams() {
       query: GET_ALL_POST_SLUGS,
       context: {
         fetchOptions: {
-          next: { revalidate: 3600 }
+          next: { revalidate: 604800 }
         }
       }
     }) as any;

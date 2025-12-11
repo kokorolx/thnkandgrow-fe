@@ -6,8 +6,8 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import styles from '../../archive.module.css';
 
-// Revalidate every hour
-export const revalidate = 3600;
+// Revalidate every 7 days
+export const revalidate = 604800;
 
 export async function generateStaticParams() {
   const client = getApolloClient();
@@ -18,7 +18,7 @@ export async function generateStaticParams() {
       variables: { first: 100 },
       context: {
         fetchOptions: {
-          next: { revalidate: 3600 }
+          next: { revalidate: 604800 }
         }
       }
     }) as any;

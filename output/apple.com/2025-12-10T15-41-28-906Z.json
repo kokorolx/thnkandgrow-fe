@@ -1,0 +1,1119 @@
+{
+  "url": "https://www.apple.com/newsroom/2025/12/sneaky-sasquatch-comes-to-apple-store-locations-this-holiday-season/",
+  "extractedAt": "2025-12-10T15:41:28.904Z",
+  "logo": {
+    "source": "svg",
+    "url": "https://www.apple.com/newsroom/",
+    "width": 158,
+    "height": 23,
+    "safeZone": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    }
+  },
+  "favicons": [
+    {
+      "type": "og:image",
+      "url": "https://www.apple.com/newsroom/images/2025/12/sneaky-sasquatch-apple-arcade/tile/Apple-Arcade-Sneaky-Sasquatch-01-lp.jpg.og.jpg?202512091501",
+      "sizes": null
+    },
+    {
+      "type": "twitter:image",
+      "url": "https://www.apple.com/newsroom/images/2025/12/sneaky-sasquatch-apple-arcade/tile/Apple-Arcade-Sneaky-Sasquatch-01-lp.jpg.og.jpg?202512091501",
+      "sizes": null
+    },
+    {
+      "type": "favicon.ico",
+      "url": "https://www.apple.com/favicon.ico",
+      "sizes": null
+    }
+  ],
+  "colors": {
+    "semantic": {},
+    "palette": [
+      {
+        "color": "rgb(29, 29, 31)",
+        "normalized": "#1d1d1f",
+        "count": 782,
+        "confidence": "high",
+        "sources": [
+          "globalnav-menuback-button",
+          "ac-ln-menucta-anchor-label",
+          "ac-ln-menucta"
+        ]
+      },
+      {
+        "color": "rgb(0, 0, 0)",
+        "normalized": "#000000",
+        "count": 545,
+        "confidence": "high",
+        "sources": [
+          "globalheader-dark",
+          "ac-gf-breadcrumbs-link",
+          "ac-gf-directory-column-section"
+        ]
+      },
+      {
+        "color": "rgb(255, 255, 255)",
+        "normalized": "#ffffff",
+        "count": 210,
+        "confidence": "high",
+        "sources": [
+          "globalnav-link",
+          "globalnav-image-regular",
+          "globalnav-link-text"
+        ]
+      },
+      {
+        "color": "rgb(110, 110, 115)",
+        "normalized": "#6e6e73",
+        "count": 90,
+        "confidence": "high",
+        "sources": [
+          "icon",
+          "paddlenav-arrow"
+        ]
+      },
+      {
+        "color": "rgb(0, 102, 204)",
+        "normalized": "#0066cc",
+        "count": 52,
+        "confidence": "high",
+        "sources": [
+          "icon-arrowdown"
+        ]
+      },
+      {
+        "color": "rgba(255, 255, 255, 0.843)",
+        "normalized": "#ffffff",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      },
+      {
+        "color": "rgba(255, 255, 255, 0.835)",
+        "normalized": "#ffffff",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      }
+    ],
+    "cssVariables": {
+      "--sk-focus-color": "#0071E3"
+    }
+  },
+  "typography": {
+    "styles": [
+      {
+        "context": "heading-1",
+        "family": "SF Pro Display",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "48px (3.00rem)",
+        "weight": 700,
+        "lineHeight": "1.08",
+        "spacing": "-0.144px",
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "28px (1.75rem)",
+        "weight": 600,
+        "lineHeight": "1.47",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "28px (1.75rem)",
+        "weight": 600,
+        "lineHeight": "1.47",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "25.5px (1.59rem)",
+        "weight": 600,
+        "lineHeight": "1.47",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "24px (1.50rem)",
+        "weight": 400,
+        "lineHeight": "1.00",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Display",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "24px (1.50rem)",
+        "weight": 700,
+        "lineHeight": "1.17",
+        "spacing": "0.216px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Display",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "21px (1.31rem)",
+        "weight": 600,
+        "lineHeight": "1.14",
+        "spacing": "0.231px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Display",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "21px (1.31rem)",
+        "weight": 600,
+        "lineHeight": "1.14",
+        "spacing": "0.231px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Display",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "19px (1.19rem)",
+        "weight": 400,
+        "lineHeight": "1.42",
+        "spacing": "0.228px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Display",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "19px (1.19rem)",
+        "weight": 400,
+        "lineHeight": "1.42",
+        "spacing": "0.228px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Display",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "19px (1.19rem)",
+        "weight": 700,
+        "lineHeight": "1.21",
+        "spacing": "0.228px",
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 400,
+        "lineHeight": "1.47",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 400,
+        "lineHeight": "1.47",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 600,
+        "lineHeight": "1.24",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 600,
+        "lineHeight": "1.24",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 400,
+        "lineHeight": "1.47",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 400,
+        "lineHeight": "1.47",
+        "spacing": null,
+        "transform": "uppercase"
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 400,
+        "lineHeight": "1.47",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "14px (0.88rem)",
+        "weight": 600,
+        "lineHeight": "1.29",
+        "spacing": "-0.224px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "14px (0.88rem)",
+        "weight": 400,
+        "lineHeight": "1.43",
+        "spacing": "-0.224px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "14px (0.88rem)",
+        "weight": 700,
+        "lineHeight": "1.43",
+        "spacing": "-0.224px",
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "14px (0.88rem)",
+        "weight": 700,
+        "lineHeight": "1.43",
+        "spacing": "-0.224px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "14px (0.88rem)",
+        "weight": 500,
+        "lineHeight": "1.43",
+        "spacing": "-0.224px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "14px (0.88rem)",
+        "weight": 500,
+        "lineHeight": "1.43",
+        "spacing": "-0.224px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "14px (0.88rem)",
+        "weight": 700,
+        "lineHeight": "1.43",
+        "spacing": "-0.224px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.00",
+        "spacing": "-0.12px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.00",
+        "spacing": "-0.12px",
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.00",
+        "spacing": "-0.12px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.00",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.83",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.33",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 700,
+        "lineHeight": "1.33",
+        "spacing": "-0.12px",
+        "transform": "uppercase"
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "Myriad Set Pro, SF Pro Icons, Apple Legacy Chevron, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 600,
+        "lineHeight": "1.33",
+        "spacing": "-0.12px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "10px (0.63rem)",
+        "weight": 400,
+        "lineHeight": "1.47",
+        "spacing": "-0.08px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "0px (0.00rem)",
+        "weight": 400,
+        "lineHeight": "NaN",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "0px (0.00rem)",
+        "weight": 400,
+        "lineHeight": "NaN",
+        "spacing": "-0.374px",
+        "transform": null
+      }
+    ],
+    "sources": {
+      "googleFonts": [],
+      "adobeFonts": false,
+      "variableFonts": false
+    }
+  },
+  "spacing": {
+    "scaleType": "8px",
+    "commonValues": [
+      {
+        "px": "1px",
+        "rem": "0.06rem",
+        "count": 7,
+        "numericValue": 1
+      },
+      {
+        "px": "2px",
+        "rem": "0.13rem",
+        "count": 26,
+        "numericValue": 2
+      },
+      {
+        "px": "3px",
+        "rem": "0.19rem",
+        "count": 11,
+        "numericValue": 3
+      },
+      {
+        "px": "4px",
+        "rem": "0.25rem",
+        "count": 19,
+        "numericValue": 4
+      },
+      {
+        "px": "5px",
+        "rem": "0.31rem",
+        "count": 17,
+        "numericValue": 5
+      },
+      {
+        "px": "6px",
+        "rem": "0.38rem",
+        "count": 33,
+        "numericValue": 6
+      },
+      {
+        "px": "7px",
+        "rem": "0.44rem",
+        "count": 298,
+        "numericValue": 7
+      },
+      {
+        "px": "8px",
+        "rem": "0.50rem",
+        "count": 46,
+        "numericValue": 8
+      },
+      {
+        "px": "9px",
+        "rem": "0.56rem",
+        "count": 70,
+        "numericValue": 9
+      },
+      {
+        "px": "9.6px",
+        "rem": "0.60rem",
+        "count": 74,
+        "numericValue": 9.6
+      },
+      {
+        "px": "10px",
+        "rem": "0.63rem",
+        "count": 20,
+        "numericValue": 10
+      },
+      {
+        "px": "12px",
+        "rem": "0.75rem",
+        "count": 12,
+        "numericValue": 12
+      },
+      {
+        "px": "13.6px",
+        "rem": "0.85rem",
+        "count": 20,
+        "numericValue": 13.6
+      },
+      {
+        "px": "14px",
+        "rem": "0.88rem",
+        "count": 8,
+        "numericValue": 14
+      },
+      {
+        "px": "20px",
+        "rem": "1.25rem",
+        "count": 7,
+        "numericValue": 20
+      },
+      {
+        "px": "32px",
+        "rem": "2.00rem",
+        "count": 8,
+        "numericValue": 32
+      },
+      {
+        "px": "40px",
+        "rem": "2.50rem",
+        "count": 17,
+        "numericValue": 40
+      },
+      {
+        "px": "44px",
+        "rem": "2.75rem",
+        "count": 38,
+        "numericValue": 44
+      },
+      {
+        "px": "52px",
+        "rem": "3.25rem",
+        "count": 8,
+        "numericValue": 52
+      },
+      {
+        "px": "84px",
+        "rem": "5.25rem",
+        "count": 12,
+        "numericValue": 84
+      }
+    ]
+  },
+  "borderRadius": {
+    "values": [
+      {
+        "value": "3px",
+        "count": 18,
+        "elements": [
+          "div"
+        ],
+        "confidence": "high",
+        "numericValue": 3
+      },
+      {
+        "value": "5px",
+        "count": 5,
+        "elements": [
+          "a"
+        ],
+        "confidence": "medium",
+        "numericValue": 5
+      },
+      {
+        "value": "8px",
+        "count": 6,
+        "elements": [
+          "div"
+        ],
+        "confidence": "medium",
+        "numericValue": 8
+      },
+      {
+        "value": "10px",
+        "count": 7,
+        "elements": [
+          "image",
+          "ul",
+          "picture"
+        ],
+        "confidence": "medium",
+        "numericValue": 10
+      },
+      {
+        "value": "12px",
+        "count": 1,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low",
+        "numericValue": 12
+      },
+      {
+        "value": "30px",
+        "count": 19,
+        "elements": [
+          "a",
+          "button",
+          "Media in this article, Download all images",
+          "p"
+        ],
+        "confidence": "high",
+        "numericValue": 30
+      },
+      {
+        "value": "44px",
+        "count": 2,
+        "elements": [
+          "button"
+        ],
+        "confidence": "low",
+        "numericValue": 44
+      },
+      {
+        "value": "0px 50% 50% 0px",
+        "count": 3,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low",
+        "numericValue": 0
+      },
+      {
+        "value": "50%",
+        "count": 15,
+        "elements": [
+          "div",
+          "tab"
+        ],
+        "confidence": "high",
+        "numericValue": 50
+      },
+      {
+        "value": "100%",
+        "count": 1,
+        "elements": [
+          "Close Search"
+        ],
+        "confidence": "low",
+        "numericValue": 100
+      }
+    ]
+  },
+  "borders": {
+    "combinations": [
+      {
+        "width": "1px 0px 0px",
+        "style": "solid none none",
+        "color": "rgb(210, 210, 215)",
+        "count": 4,
+        "elements": [
+          "div"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "width": "0px 0px 1px",
+        "style": "none none solid",
+        "color": "rgb(29, 29, 31)",
+        "count": 3,
+        "elements": [
+          "li",
+          "div"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "0px 0px 1px",
+        "style": "none none solid",
+        "color": "rgba(0, 0, 0, 0.56)",
+        "count": 1,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low"
+      }
+    ]
+  },
+  "shadows": [],
+  "components": {
+    "buttons": [
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(29, 29, 31)",
+            "color": "rgb(0, 102, 204)",
+            "padding": "0px",
+            "borderRadius": "50%",
+            "border": "0px none rgb(0, 102, 204)",
+            "boxShadow": "none",
+            "outline": "rgb(0, 102, 204) none 0px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": {
+            "color": "rgb(110, 110, 115)",
+            "opacity": "1",
+            "backgroundColor": "rgb(51, 51, 54)",
+            "transform": "scale(1.05)"
+          },
+          "active": {
+            "color": "var(--sk-button-color-active, var(--sk-button-color))",
+            "outline": "none",
+            "backgroundColor": "rgba(255, 255, 255, 0.19)",
+            "transform": "scale(1)",
+            "opacity": "1"
+          },
+          "focus": {
+            "outline": "2px solid var(--sk-focus-color, #0071e3)",
+            "opacity": "1",
+            "transform": "scale(1.03)",
+            "color": "rgb(245, 245, 247)",
+            "backgroundColor": "rgb(51, 51, 54)",
+            "boxShadow": "none",
+            "border": "none"
+          }
+        },
+        "fontWeight": "400",
+        "fontSize": "0px",
+        "classes": "dotnav-item current",
+        "confidence": "high"
+      },
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(210, 210, 215)",
+            "color": "rgb(0, 102, 204)",
+            "padding": "0px",
+            "borderRadius": "50%",
+            "border": "0px none rgb(0, 102, 204)",
+            "boxShadow": "none",
+            "outline": "rgb(0, 102, 204) none 0px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": {
+            "color": "rgb(110, 110, 115)",
+            "opacity": "1",
+            "backgroundColor": "rgb(51, 51, 54)",
+            "transform": "scale(1.05)"
+          },
+          "active": {
+            "color": "var(--sk-button-color-active, var(--sk-button-color))",
+            "outline": "none",
+            "backgroundColor": "rgba(255, 255, 255, 0.19)",
+            "transform": "scale(1)",
+            "opacity": "1"
+          },
+          "focus": {
+            "outline": "2px solid var(--sk-focus-color, #0071e3)",
+            "opacity": "1",
+            "transform": "scale(1.03)",
+            "color": "rgb(245, 245, 247)",
+            "backgroundColor": "rgb(51, 51, 54)",
+            "boxShadow": "none",
+            "border": "none"
+          }
+        },
+        "fontWeight": "400",
+        "fontSize": "0px",
+        "classes": "dotnav-item",
+        "confidence": "high"
+      },
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(245, 245, 247)",
+            "color": "rgb(110, 110, 115)",
+            "padding": "0px",
+            "borderRadius": "44px",
+            "border": "0px none rgb(110, 110, 115)",
+            "boxShadow": "none",
+            "outline": "rgb(110, 110, 115) none 0px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": {
+            "opacity": "0.5",
+            "color": "var(--modal-close-color-hover)",
+            "backgroundColor": "rgb(232, 232, 237)"
+          },
+          "active": {
+            "color": "var(--sk-button-color-active, var(--sk-button-color))",
+            "outline": "none",
+            "backgroundColor": "rgba(255, 255, 255, 0.19)",
+            "transform": "scale(0.9) translateX(-50%) translateY(-50%)",
+            "opacity": "1"
+          },
+          "focus": {
+            "opacity": "0.5",
+            "transform": "scaleY(-1)",
+            "outline": "2px solid var(--sk-focus-color, #0071E3)",
+            "boxShadow": "none",
+            "color": "inherit",
+            "backgroundColor": "rgb(232, 232, 237)"
+          }
+        },
+        "fontWeight": "600",
+        "fontSize": "28px",
+        "classes": "paddlenav-arrow paddlenav-arrow-previous",
+        "confidence": "high"
+      },
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(22, 22, 23)",
+            "padding": "8px 16px",
+            "borderRadius": "30px",
+            "border": "0px none rgb(22, 22, 23)",
+            "boxShadow": "none",
+            "outline": "rgb(22, 22, 23) none 0px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": {
+            "color": "rgb(110, 110, 115)",
+            "opacity": "1",
+            "backgroundColor": "rgb(51, 51, 54)",
+            "transform": "scale(1.05)"
+          },
+          "active": {
+            "color": "var(--sk-button-color-active, var(--sk-button-color))",
+            "outline": "none",
+            "backgroundColor": "rgba(255, 255, 255, 0.19)",
+            "transform": "scale(1)",
+            "opacity": "1"
+          },
+          "focus": {
+            "outline": "2px solid var(--sk-focus-color, #0071e3)",
+            "opacity": "0.5",
+            "transform": "scale(1.03)",
+            "color": "rgb(245, 245, 247)",
+            "backgroundColor": "rgb(51, 51, 54)",
+            "boxShadow": "none",
+            "border": "none"
+          }
+        },
+        "fontWeight": "700",
+        "fontSize": "14px",
+        "classes": "icon icon-after icon-docfill icon-adjusted",
+        "confidence": "high"
+      },
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(232, 232, 237)",
+            "color": "rgb(22, 22, 23)",
+            "padding": "8px 16px",
+            "borderRadius": "30px",
+            "border": "0px none rgb(22, 22, 23)",
+            "boxShadow": "none",
+            "outline": "rgb(22, 22, 23) none 0px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": {
+            "color": "rgb(110, 110, 115)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "transform": "scale(0.8)"
+          },
+          "active": {
+            "backgroundColor": "rgba(255, 255, 255, 0.19)",
+            "transform": "scale(1)",
+            "opacity": "1"
+          },
+          "focus": {
+            "transform": "scale(1.03)",
+            "opacity": "1",
+            "color": "rgb(245, 245, 247)",
+            "boxShadow": "none",
+            "backgroundColor": "rgb(51, 51, 54)",
+            "outline": "none",
+            "border": "none"
+          }
+        },
+        "fontWeight": "700",
+        "fontSize": "14px",
+        "classes": "footertile-copy-cta block-link",
+        "confidence": "medium"
+      }
+    ],
+    "inputs": {
+      "text": [],
+      "checkbox": [],
+      "radio": [],
+      "select": []
+    },
+    "links": [
+      {
+        "color": "rgba(255, 255, 255, 0.8)",
+        "textDecoration": "none",
+        "fontWeight": "600",
+        "states": {
+          "default": {
+            "color": "rgba(255, 255, 255, 0.8)",
+            "textDecoration": "none"
+          },
+          "hover": {
+            "color": "var(--footer-mini-shop-link-color)",
+            "textDecoration": "none"
+          }
+        }
+      },
+      {
+        "color": "rgb(29, 29, 31)",
+        "textDecoration": "none",
+        "fontWeight": "600",
+        "states": {
+          "default": {
+            "color": "rgb(29, 29, 31)",
+            "textDecoration": "none"
+          },
+          "hover": {
+            "color": "var(--footer-mini-shop-link-color)",
+            "textDecoration": "none"
+          }
+        }
+      },
+      {
+        "color": "rgb(0, 102, 204)",
+        "textDecoration": "underline",
+        "fontWeight": "400",
+        "states": {
+          "default": {
+            "color": "rgb(0, 102, 204)",
+            "textDecoration": "underline"
+          },
+          "hover": {
+            "color": "var(--footer-mini-shop-link-color)",
+            "textDecoration": "none"
+          }
+        }
+      },
+      {
+        "color": "rgb(22, 22, 23)",
+        "textDecoration": "underline",
+        "fontWeight": "700",
+        "states": {
+          "default": {
+            "color": "rgb(22, 22, 23)",
+            "textDecoration": "underline"
+          },
+          "hover": {
+            "color": "var(--footer-mini-shop-link-color)",
+            "textDecoration": "none"
+          }
+        }
+      },
+      {
+        "color": "rgba(0, 0, 0, 0.72)",
+        "textDecoration": "none",
+        "fontWeight": "400",
+        "states": {
+          "default": {
+            "color": "rgba(0, 0, 0, 0.72)",
+            "textDecoration": "none"
+          },
+          "hover": {
+            "color": "var(--footer-mini-shop-link-color)",
+            "textDecoration": "none"
+          }
+        }
+      }
+    ]
+  },
+  "breakpoints": [
+    {
+      "px": "414px"
+    },
+    {
+      "px": "415px"
+    },
+    {
+      "px": "416px"
+    },
+    {
+      "px": "428px"
+    },
+    {
+      "px": "429px"
+    },
+    {
+      "px": "480px"
+    },
+    {
+      "px": "555px"
+    },
+    {
+      "px": "569px"
+    },
+    {
+      "px": "640px"
+    },
+    {
+      "px": "641px"
+    },
+    {
+      "px": "734px"
+    },
+    {
+      "px": "735px"
+    },
+    {
+      "px": "767px"
+    },
+    {
+      "px": "768px"
+    },
+    {
+      "px": "833px"
+    },
+    {
+      "px": "834px"
+    },
+    {
+      "px": "1023px"
+    },
+    {
+      "px": "1044px"
+    },
+    {
+      "px": "1068px"
+    },
+    {
+      "px": "1069px"
+    },
+    {
+      "px": "1440px"
+    },
+    {
+      "px": "1441px"
+    },
+    {
+      "px": "1920px"
+    },
+    {
+      "px": "1922px"
+    },
+    {
+      "px": "2080px"
+    }
+  ],
+  "iconSystem": [
+    {
+      "name": "SVG Icons",
+      "type": "svg"
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "Vuetify",
+      "confidence": "high",
+      "evidence": "730 v- components"
+    }
+  ]
+}

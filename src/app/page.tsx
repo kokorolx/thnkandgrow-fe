@@ -7,8 +7,8 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 
-// Revalidate every minute
-export const revalidate = 60;
+// Revalidate every 3 days
+export const revalidate = 259200;
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = getApolloClient();

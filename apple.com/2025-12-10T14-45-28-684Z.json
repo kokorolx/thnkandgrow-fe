@@ -1,0 +1,1155 @@
+{
+  "url": "https://www.apple.com/newsroom/",
+  "extractedAt": "2025-12-10T14:45:28.682Z",
+  "logo": {
+    "source": "svg",
+    "url": "https://www.apple.com/newsroom/",
+    "width": 176.96875,
+    "height": 37.015625,
+    "safeZone": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    }
+  },
+  "favicons": [
+    {
+      "type": "og:image",
+      "url": "https://www.apple.com/newsroom/images/default/apple-logo-og.jpg?202512091501",
+      "sizes": null
+    },
+    {
+      "type": "twitter:image",
+      "url": "https://www.apple.com/newsroom/images/default/apple-logo-og.jpg?202512091501",
+      "sizes": null
+    },
+    {
+      "type": "favicon.ico",
+      "url": "https://www.apple.com/favicon.ico",
+      "sizes": null
+    }
+  ],
+  "colors": {
+    "semantic": {
+      "secondary": "rgb(232, 232, 237)",
+      "primary": "rgb(245, 245, 247)"
+    },
+    "palette": [
+      {
+        "color": "rgb(29, 29, 31)",
+        "normalized": "#1d1d1f",
+        "count": 683,
+        "confidence": "high",
+        "sources": [
+          "globalnav-menuback-button",
+          "ac-ln-menucta-anchor-label",
+          "ac-ln-menucta"
+        ]
+      },
+      {
+        "color": "rgb(0, 0, 0)",
+        "normalized": "#000000",
+        "count": 540,
+        "confidence": "high",
+        "sources": [
+          "globalheader-dark",
+          "ac-ls-button",
+          "ac-gf-directory-column-section"
+        ]
+      },
+      {
+        "color": "rgb(0, 102, 204)",
+        "normalized": "#0066cc",
+        "count": 334,
+        "confidence": "high",
+        "sources": [
+          "tile"
+        ]
+      },
+      {
+        "color": "rgba(255, 255, 255, 0.92)",
+        "normalized": "#ffffff",
+        "count": 299,
+        "confidence": "high",
+        "sources": [
+          "ac-ls-close",
+          "globalnav-link",
+          "globalnav-image-regular"
+        ]
+      },
+      {
+        "color": "rgb(110, 110, 115)",
+        "normalized": "#6e6e73",
+        "count": 144,
+        "confidence": "high",
+        "sources": [
+          "nr-cta-circular-icon",
+          "paddlenav-arrow"
+        ]
+      },
+      {
+        "color": "rgb(245, 245, 247)",
+        "normalized": "#f5f5f7",
+        "count": 30,
+        "confidence": "high",
+        "sources": [
+          "ac-ls-button",
+          "nr-cta-circular-icon",
+          "paddlenav-arrow"
+        ]
+      },
+      {
+        "color": "rgb(255, 255, 255)",
+        "normalized": "#ffffff",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      },
+      {
+        "color": "rgba(255, 255, 255, 0.843)",
+        "normalized": "#ffffff",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      },
+      {
+        "color": "rgb(0, 113, 227)",
+        "normalized": "#0071e3",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      },
+      {
+        "color": "rgba(255, 255, 255, 0.957)",
+        "normalized": "#ffffff",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      },
+      {
+        "color": "rgba(255, 255, 255, 0.847)",
+        "normalized": "#ffffff",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      },
+      {
+        "color": "rgba(255, 255, 255, 0.85)",
+        "normalized": "#ffffff",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      }
+    ],
+    "cssVariables": {
+      "--sk-focus-color": "#0071E3"
+    }
+  },
+  "typography": {
+    "styles": [
+      {
+        "context": "heading-1",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "34px (2.13rem)",
+        "weight": 600,
+        "lineHeight": "1.47",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Display",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "32px (2.00rem)",
+        "weight": 700,
+        "lineHeight": "1.13",
+        "spacing": "0.128px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Display",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "32px (2.00rem)",
+        "weight": 400,
+        "lineHeight": "1.42",
+        "spacing": "0.384px",
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "28px (1.75rem)",
+        "weight": 600,
+        "lineHeight": "1.47",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "25.5px (1.59rem)",
+        "weight": 600,
+        "lineHeight": "1.47",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Text",
+        "fallbacks": "Myriad Set Pro, system-ui, -apple-system, system-ui, Segoe UI, SF Pro Icons, Apple Legacy Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "24px (1.50rem)",
+        "weight": 300,
+        "lineHeight": "1.50",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Display",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "21px (1.31rem)",
+        "weight": 600,
+        "lineHeight": "1.14",
+        "spacing": "0.231px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Display",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "21px (1.31rem)",
+        "weight": 600,
+        "lineHeight": "1.14",
+        "spacing": "0.231px",
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "Myriad Set Pro, system-ui, -apple-system, system-ui, Segoe UI, SF Pro Icons, Apple Legacy Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "18px (1.13rem)",
+        "weight": 300,
+        "lineHeight": "1.00",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "18px (1.13rem)",
+        "weight": 400,
+        "lineHeight": "1.47",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "Myriad Set Pro, system-ui, -apple-system, system-ui, Segoe UI, SF Pro Icons, Apple Legacy Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 400,
+        "lineHeight": "2.41",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Text",
+        "fallbacks": "Myriad Set Pro, system-ui, -apple-system, system-ui, Segoe UI, SF Pro Icons, Apple Legacy Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 400,
+        "lineHeight": "2.41",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 600,
+        "lineHeight": "1.24",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 600,
+        "lineHeight": "1.24",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 400,
+        "lineHeight": "1.47",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "17px (1.06rem)",
+        "weight": 700,
+        "lineHeight": "1.24",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "Myriad Set Pro, system-ui, -apple-system, system-ui, Segoe UI, SF Pro Icons, Apple Legacy Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "14px (0.88rem)",
+        "weight": 400,
+        "lineHeight": "1.29",
+        "spacing": "-0.224px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "14px (0.88rem)",
+        "weight": 600,
+        "lineHeight": "1.29",
+        "spacing": "-0.224px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.00",
+        "spacing": "-0.12px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.00",
+        "spacing": "-0.12px",
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.00",
+        "spacing": "-0.12px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.00",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.83",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.33",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "Myriad Set Pro, SF Pro Icons, Apple Legacy Chevron, Helvetica Neue, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 600,
+        "lineHeight": "1.33",
+        "spacing": "-0.12px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "10px (0.63rem)",
+        "weight": 400,
+        "lineHeight": "1.47",
+        "spacing": "-0.08px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "0px (0.00rem)",
+        "weight": 400,
+        "lineHeight": "NaN",
+        "spacing": "-0.374px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Text",
+        "fallbacks": "SF Pro Icons, Helvetica Neue, Helvetica, Arial",
+        "size": "0px (0.00rem)",
+        "weight": 400,
+        "lineHeight": "NaN",
+        "spacing": "-0.374px",
+        "transform": null
+      }
+    ],
+    "sources": {
+      "googleFonts": [],
+      "adobeFonts": false,
+      "variableFonts": false
+    }
+  },
+  "spacing": {
+    "scaleType": "8px",
+    "commonValues": [
+      {
+        "px": "2px",
+        "rem": "0.13rem",
+        "count": 48,
+        "numericValue": 2
+      },
+      {
+        "px": "3px",
+        "rem": "0.19rem",
+        "count": 24,
+        "numericValue": 3
+      },
+      {
+        "px": "4px",
+        "rem": "0.25rem",
+        "count": 15,
+        "numericValue": 4
+      },
+      {
+        "px": "5px",
+        "rem": "0.31rem",
+        "count": 9,
+        "numericValue": 5
+      },
+      {
+        "px": "6px",
+        "rem": "0.38rem",
+        "count": 13,
+        "numericValue": 6
+      },
+      {
+        "px": "7px",
+        "rem": "0.44rem",
+        "count": 298,
+        "numericValue": 7
+      },
+      {
+        "px": "8px",
+        "rem": "0.50rem",
+        "count": 32,
+        "numericValue": 8
+      },
+      {
+        "px": "9px",
+        "rem": "0.56rem",
+        "count": 70,
+        "numericValue": 9
+      },
+      {
+        "px": "9.6px",
+        "rem": "0.60rem",
+        "count": 74,
+        "numericValue": 9.6
+      },
+      {
+        "px": "10px",
+        "rem": "0.63rem",
+        "count": 20,
+        "numericValue": 10
+      },
+      {
+        "px": "12px",
+        "rem": "0.75rem",
+        "count": 33,
+        "numericValue": 12
+      },
+      {
+        "px": "14px",
+        "rem": "0.88rem",
+        "count": 8,
+        "numericValue": 14
+      },
+      {
+        "px": "16px",
+        "rem": "1.00rem",
+        "count": 21,
+        "numericValue": 16
+      },
+      {
+        "px": "24px",
+        "rem": "1.50rem",
+        "count": 36,
+        "numericValue": 24
+      },
+      {
+        "px": "32px",
+        "rem": "2.00rem",
+        "count": 13,
+        "numericValue": 32
+      },
+      {
+        "px": "36px",
+        "rem": "2.25rem",
+        "count": 18,
+        "numericValue": 36
+      },
+      {
+        "px": "40px",
+        "rem": "2.50rem",
+        "count": 17,
+        "numericValue": 40
+      },
+      {
+        "px": "44px",
+        "rem": "2.75rem",
+        "count": 19,
+        "numericValue": 44
+      },
+      {
+        "px": "80px",
+        "rem": "5.00rem",
+        "count": 6,
+        "numericValue": 80
+      },
+      {
+        "px": "84px",
+        "rem": "5.25rem",
+        "count": 12,
+        "numericValue": 84
+      }
+    ]
+  },
+  "borderRadius": {
+    "values": [
+      {
+        "value": "0px 0px 8px 8px",
+        "count": 1,
+        "elements": [
+          "menuitem"
+        ],
+        "confidence": "low",
+        "numericValue": 0
+      },
+      {
+        "value": "5px",
+        "count": 5,
+        "elements": [
+          "a"
+        ],
+        "confidence": "medium",
+        "numericValue": 5
+      },
+      {
+        "value": "8px 8px 0px 0px",
+        "count": 1,
+        "elements": [
+          "menuitem"
+        ],
+        "confidence": "low",
+        "numericValue": 8
+      },
+      {
+        "value": "8px",
+        "count": 1,
+        "elements": [
+          "button"
+        ],
+        "confidence": "low",
+        "numericValue": 8
+      },
+      {
+        "value": "11px",
+        "count": 2,
+        "elements": [
+          "button",
+          "menu"
+        ],
+        "confidence": "low",
+        "numericValue": 11
+      },
+      {
+        "value": "12px",
+        "count": 1,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low",
+        "numericValue": 12
+      },
+      {
+        "value": "16px",
+        "count": 8,
+        "elements": [
+          "div"
+        ],
+        "confidence": "medium",
+        "numericValue": 16
+      },
+      {
+        "value": "20px",
+        "count": 8,
+        "elements": [
+          "div"
+        ],
+        "confidence": "medium",
+        "numericValue": 20
+      },
+      {
+        "value": "24px",
+        "count": 18,
+        "elements": [
+          "Apple Podcasts names The Rest Is History the 2025 Show of the Year - UPDATE - Posted on December 4, 2025",
+          "Apple unveils the winners of the 2025 App Store Awards - PRESS RELEASE - Posted on December 4, 2025",
+          "John Giannandrea to retire from Apple - PRESS RELEASE - Posted on December 1, 2025",
+          "Tyler, The Creator is Apple Music’s Artist of the Year for 2025 - UPDATE - Posted on November 20, 2025",
+          "Apple announces finalists for the 2025 App Store Awards - UPDATE - Posted on November 19, 2025"
+        ],
+        "confidence": "high",
+        "numericValue": 24
+      },
+      {
+        "value": "30px",
+        "count": 4,
+        "elements": [
+          "View all In the Loop",
+          "a"
+        ],
+        "confidence": "medium",
+        "numericValue": 30
+      },
+      {
+        "value": "32px",
+        "count": 11,
+        "elements": [
+          "Sneaky Sasquatch comes to Apple Store locations this holiday season - UPDATE - Posted on December 9, 2025",
+          "Apple Fitness+ expands to 28 new markets - UPDATE - Posted on December 8, 2025",
+          "Apple Manufacturing Academy launches virtual programming - QUICK READ - Posted on December 8, 2025",
+          "image",
+          "MLS Cup streams free on Apple TV this Saturday - QUICK READ - Posted on December 5, 2025"
+        ],
+        "confidence": "high",
+        "numericValue": 32
+      },
+      {
+        "value": "44px",
+        "count": 4,
+        "elements": [
+          "Previous tile group",
+          "Next tile group",
+          "previous apple story",
+          "next apple story"
+        ],
+        "confidence": "medium",
+        "numericValue": 44
+      },
+      {
+        "value": "50%",
+        "count": 24,
+        "elements": [
+          "div",
+          "tab",
+          "image"
+        ],
+        "confidence": "high",
+        "numericValue": 50
+      },
+      {
+        "value": "100%",
+        "count": 1,
+        "elements": [
+          "Close Search"
+        ],
+        "confidence": "low",
+        "numericValue": 100
+      }
+    ]
+  },
+  "borders": {
+    "combinations": [
+      {
+        "width": "3px",
+        "style": "solid",
+        "color": "rgba(255, 255, 255, 0.08)",
+        "count": 1,
+        "elements": [
+          "button"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "3px",
+        "style": "solid",
+        "color": "rgb(22, 22, 23)",
+        "count": 1,
+        "elements": [
+          "menu"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "0px 0px 3px",
+        "style": "none none solid",
+        "color": "rgb(22, 22, 23)",
+        "count": 1,
+        "elements": [
+          "menuitem"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "0px 0px 1px",
+        "style": "none none solid",
+        "color": "rgba(0, 0, 0, 0.56)",
+        "count": 1,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low"
+      }
+    ]
+  },
+  "shadows": [],
+  "components": {
+    "buttons": [
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(22, 22, 23)",
+            "color": "rgba(255, 255, 255, 0.92)",
+            "padding": "0px 14px",
+            "borderRadius": "11px",
+            "border": "3px solid rgba(255, 255, 255, 0.08)",
+            "boxShadow": "none",
+            "outline": "rgba(255, 255, 255, 0.92) none 0px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": null,
+          "active": null,
+          "focus": {
+            "outline": "2px solid var(--sk-focus-color, #0071E3)"
+          }
+        },
+        "fontWeight": "400",
+        "fontSize": "17px",
+        "classes": "ac-ls-dropdown-select",
+        "confidence": "high"
+      },
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(245, 245, 247)",
+            "color": "rgb(0, 0, 0)",
+            "padding": "8px 15px",
+            "borderRadius": "8px",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "outline": "rgb(0, 0, 0) none 0px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": {
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "backgroundColor": "rgba(255, 255, 255, 0.16)",
+            "transform": "scale(0.8)"
+          },
+          "active": {
+            "color": "var(--sk-button-color-active, var(--sk-button-color))",
+            "outline": "none",
+            "backgroundColor": "rgb(237, 237, 242)",
+            "transform": "scale(1)",
+            "opacity": "1"
+          },
+          "focus": {
+            "outline": "2px solid var(--sk-focus-color, #0071E3)",
+            "opacity": "1",
+            "transform": "scale(1.03)",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(255, 255, 255, 0.16)",
+            "boxShadow": "rgba(0, 0, 0, 0.2) 0px 0px 16px 0px",
+            "border": "none"
+          }
+        },
+        "fontWeight": "400",
+        "fontSize": "14px",
+        "classes": "ac-ls-button ac-ls-actions-item ac-ls-continue",
+        "confidence": "high"
+      },
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 31)",
+            "padding": "0px",
+            "borderRadius": "32px",
+            "border": "0px none rgb(29, 29, 31)",
+            "boxShadow": "none",
+            "outline": "rgb(29, 29, 31) none 0px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": {
+            "opacity": "1",
+            "color": "rgb(245, 245, 247)",
+            "backgroundColor": "rgb(66, 66, 69)"
+          },
+          "active": {
+            "color": "var(--sk-button-color-active, var(--sk-button-color))",
+            "outline": "none",
+            "backgroundColor": "rgba(255, 255, 255, 0.19)",
+            "transform": "scale(0.9) translateX(-50%) translateY(-50%)",
+            "opacity": "1"
+          },
+          "focus": {
+            "opacity": "1",
+            "transform": "scale(1.03)",
+            "outline": "2px solid var(--sk-focus-color, #0071E3)",
+            "boxShadow": "none",
+            "color": "inherit",
+            "backgroundColor": "rgb(232, 232, 237)",
+            "border": "none"
+          }
+        },
+        "fontWeight": "400",
+        "fontSize": "17px",
+        "classes": "tile tile-2up tile-quick-read",
+        "confidence": "high"
+      },
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(232, 232, 237)",
+            "color": "rgb(29, 29, 31)",
+            "padding": "12px 24px 11px",
+            "borderRadius": "30px",
+            "border": "0px none rgb(29, 29, 31)",
+            "boxShadow": "none",
+            "outline": "rgb(29, 29, 31) none 0px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": {
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "backgroundColor": "rgba(255, 255, 255, 0.16)",
+            "transform": "scale(0.8)"
+          },
+          "active": {
+            "color": "var(--sk-button-color-active, var(--sk-button-color))",
+            "outline": "none",
+            "backgroundColor": "rgb(237, 237, 242)",
+            "transform": "scale(1)",
+            "opacity": "1"
+          },
+          "focus": {
+            "outline": "2px solid var(--sk-focus-color, #0071E3)",
+            "opacity": "1",
+            "transform": "scale(1.03)",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(255, 255, 255, 0.16)",
+            "boxShadow": "rgba(0, 0, 0, 0.2) 0px 0px 16px 0px",
+            "border": "none"
+          }
+        },
+        "fontWeight": "600",
+        "fontSize": "17px",
+        "classes": "nr-cta-secondary",
+        "confidence": "medium"
+      },
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(29, 29, 31)",
+            "color": "rgb(0, 102, 204)",
+            "padding": "0px",
+            "borderRadius": "50%",
+            "border": "0px none rgb(0, 102, 204)",
+            "boxShadow": "none",
+            "outline": "rgb(0, 102, 204) none 0px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": {
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "backgroundColor": "rgba(255, 255, 255, 0.16)",
+            "transform": "scale(0.8)"
+          },
+          "active": {
+            "color": "var(--sk-button-color-active, var(--sk-button-color))",
+            "outline": "none",
+            "backgroundColor": "rgb(237, 237, 242)",
+            "transform": "scale(1)",
+            "opacity": "1"
+          },
+          "focus": {
+            "outline": "2px solid var(--sk-focus-color, #0071E3)",
+            "opacity": "1",
+            "transform": "scale(1.03)",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(255, 255, 255, 0.16)",
+            "boxShadow": "rgba(0, 0, 0, 0.2) 0px 0px 16px 0px",
+            "border": "none"
+          }
+        },
+        "fontWeight": "400",
+        "fontSize": "0px",
+        "classes": "dotnav-item current",
+        "confidence": "high"
+      },
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgb(210, 210, 215)",
+            "color": "rgb(0, 102, 204)",
+            "padding": "0px",
+            "borderRadius": "50%",
+            "border": "0px none rgb(0, 102, 204)",
+            "boxShadow": "none",
+            "outline": "rgb(0, 102, 204) none 0px",
+            "transform": "none",
+            "opacity": "1"
+          },
+          "hover": {
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "backgroundColor": "rgba(255, 255, 255, 0.16)",
+            "transform": "scale(0.8)"
+          },
+          "active": {
+            "color": "var(--sk-button-color-active, var(--sk-button-color))",
+            "outline": "none",
+            "backgroundColor": "rgb(237, 237, 242)",
+            "transform": "scale(1)",
+            "opacity": "1"
+          },
+          "focus": {
+            "outline": "2px solid var(--sk-focus-color, #0071E3)",
+            "opacity": "1",
+            "transform": "scale(1.03)",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(255, 255, 255, 0.16)",
+            "boxShadow": "rgba(0, 0, 0, 0.2) 0px 0px 16px 0px",
+            "border": "none"
+          }
+        },
+        "fontWeight": "400",
+        "fontSize": "0px",
+        "classes": "dotnav-item",
+        "confidence": "high"
+      }
+    ],
+    "inputs": {
+      "text": [],
+      "checkbox": [],
+      "radio": [],
+      "select": []
+    },
+    "links": [
+      {
+        "color": "rgb(0, 0, 0)",
+        "textDecoration": "none",
+        "fontWeight": "400",
+        "states": {
+          "default": {
+            "color": "rgb(0, 0, 0)",
+            "textDecoration": "none"
+          },
+          "hover": {
+            "color": "var(--sk-button-color-hover, var(--sk-button-color))",
+            "textDecoration": "none"
+          }
+        }
+      },
+      {
+        "color": "rgba(255, 255, 255, 0.8)",
+        "textDecoration": "none",
+        "fontWeight": "600",
+        "states": {
+          "default": {
+            "color": "rgba(255, 255, 255, 0.8)",
+            "textDecoration": "none"
+          },
+          "hover": {
+            "color": "rgb(0, 102, 204)",
+            "textDecoration": "none"
+          }
+        }
+      },
+      {
+        "color": "rgb(29, 29, 31)",
+        "textDecoration": "none",
+        "fontWeight": "600",
+        "states": {
+          "default": {
+            "color": "rgb(29, 29, 31)",
+            "textDecoration": "none"
+          },
+          "hover": {
+            "color": "rgb(0, 102, 204)",
+            "textDecoration": "none"
+          }
+        }
+      },
+      {
+        "color": "rgb(0, 102, 204)",
+        "textDecoration": "none",
+        "fontWeight": "400",
+        "states": {
+          "default": {
+            "color": "rgb(0, 102, 204)",
+            "textDecoration": "underline"
+          },
+          "hover": {
+            "color": "rgb(0, 102, 204)",
+            "textDecoration": "none"
+          }
+        }
+      }
+    ]
+  },
+  "breakpoints": [
+    {
+      "px": "320px"
+    },
+    {
+      "px": "415px"
+    },
+    {
+      "px": "416px"
+    },
+    {
+      "px": "419px"
+    },
+    {
+      "px": "420px"
+    },
+    {
+      "px": "428px"
+    },
+    {
+      "px": "480px"
+    },
+    {
+      "px": "500px"
+    },
+    {
+      "px": "569px"
+    },
+    {
+      "px": "640px"
+    },
+    {
+      "px": "641px"
+    },
+    {
+      "px": "734px"
+    },
+    {
+      "px": "735px"
+    },
+    {
+      "px": "767px"
+    },
+    {
+      "px": "768px"
+    },
+    {
+      "px": "833px"
+    },
+    {
+      "px": "834px"
+    },
+    {
+      "px": "1023px"
+    },
+    {
+      "px": "1044px"
+    },
+    {
+      "px": "1068px"
+    },
+    {
+      "px": "1069px"
+    },
+    {
+      "px": "1440px"
+    },
+    {
+      "px": "1441px"
+    },
+    {
+      "px": "1633px"
+    },
+    {
+      "px": "1922px"
+    }
+  ],
+  "iconSystem": [
+    {
+      "name": "SVG Icons",
+      "type": "svg"
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "Vuetify",
+      "confidence": "high",
+      "evidence": "735 v- components"
+    }
+  ]
+}
