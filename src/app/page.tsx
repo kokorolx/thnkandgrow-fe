@@ -1,5 +1,5 @@
 import { getApolloClient } from '@/lib/apollo';
-import { GET_ALL_POSTS, GET_RECENT_POSTS, GET_CATEGORIES, GET_GENERAL_SETTINGS } from '@/lib/queries';
+import { GET_ALL_POSTS, GET_RECENT_POSTS, GET_CATEGORIES, GET_GENERAL_SETTINGS, GET_POSTS_BY_CATEGORY } from '@/lib/queries';
 import PostCard from '@/components/PostCard';
 import { calculateReadingTime } from '@/lib/utils';
 import Link from 'next/link';
@@ -50,8 +50,24 @@ async function getPosts() {
   }
 }
 
+async function getArchitecturePosts() {
+  const client = getApolloClient();
+  try {
+    const { data } = await client.query({
+      query: GET_POSTS_BY_CATEGORY,
+      variables: { slug: 'architecture' },
+    }) as any;
+    return data?.category?.posts?.nodes || [];
+  } catch (error) {
+    console.error('Error fetching architecture posts:', error);
+    return [];
+  }
+}
+
 export default async function Home() {
   const posts = await getPosts();
+  const architecturePosts = await getArchitecturePosts();
+  
   const featuredPost = posts[0];
   // Show 6 recent posts (excluding the hero) for the grid
   const recentPosts = posts.slice(1, 7);
@@ -59,6 +75,10 @@ export default async function Home() {
   const inTheLoopPosts = posts.slice(1, 11);
   // Show 6 posts for "More from Newsroom" section
   const moreFromNewsroom = posts.slice(11, 17);
+  
+  // Architecture section: featured post + 3 grid posts
+  const architectureFeatured = architecturePosts[0];
+  const architectureGrid = architecturePosts.slice(1, 4);
 
   return (
     <div className="animate-fade-in">
@@ -153,6 +173,72 @@ export default async function Home() {
               ))}
             </div>
           </div>
+        </section>
+      )}
+
+      {/* Architecture Section */}
+      {architectureFeatured && (
+        <section className={`${styles.container} ${styles.architectureSection}`}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>Architecture</h2>
+            <Link href="/category/architecture" className={styles.archiveLink}>
+              View All ›
+            </Link>
+          </div>
+
+          {/* Featured Card */}
+          <Link href={`/posts/${architectureFeatured.slug}`} className={styles.architectureFeaturedLink}>
+            {architectureFeatured.featuredImage?.node?.sourceUrl ? (
+              <Image
+                src={architectureFeatured.featuredImage.node.sourceUrl}
+                alt={architectureFeatured.title}
+                fill
+                className={styles.architectureFeaturedImage}
+                priority
+              />
+            ) : (
+              <div className="w-full h-full bg-gray-200" />
+            )}
+
+            {/* Overlay */}
+            <div className={styles.architectureFeaturedOverlay}>
+              <div className={styles.architectureFeaturedContent}>
+                <span className={styles.architectureCategory}>
+                  {architectureFeatured.categories?.nodes?.[0]?.name || 'Architecture'}
+                </span>
+                <h3 className={styles.architectureFeaturedTitle}>
+                  {architectureFeatured.title}
+                </h3>
+                <div className={styles.architectureFeaturedMeta}>
+                  <time>{new Date(architectureFeatured.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
+                </div>
+              </div>
+            </div>
+          </Link>
+
+          {/* Grid of 3 Posts */}
+          {architectureGrid.length > 0 && (
+            <div className={styles.architectureGrid}>
+              {architectureGrid.map((post: any) => (
+                <PostCard
+                  key={post.id}
+                  title={post.title}
+                  excerpt={post.excerpt}
+                  slug={post.slug}
+                  date={post.date}
+                  author={{
+                    name: post.author.node.name,
+                    slug: post.author.node.slug,
+                    avatar: post.author.node.avatar?.url
+                  }}
+                  coverImage={post.featuredImage?.node?.sourceUrl}
+                  category={post.categories?.nodes[0]?.name}
+                  categorySlug={post.categories?.nodes[0]?.slug}
+                  readingTime={calculateReadingTime(post.content || '')}
+                />
+              ))}
+            </div>
+          )}
         </section>
       )}
 
