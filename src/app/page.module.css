@@ -1,12 +1,12 @@
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 22px;
+  padding: 0 var(--spacing-lg);
 }
 
 .heroSection {
-  margin-top: 32px;
-  margin-bottom: 64px;
+  margin-top: var(--spacing-3xl);
+  margin-bottom: var(--spacing-6xl);
 }
 
 .heroLink {
@@ -42,12 +42,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 32px;
+  padding: var(--spacing-3xl);
 }
 
 @media (min-width: 768px) {
   .heroOverlay {
-    padding: 48px;
+    padding: var(--spacing-5xl);
   }
 }
 
@@ -60,7 +60,7 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: var(--spacing-md);
   display: block;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -71,7 +71,7 @@
   line-height: 1.1;
   letter-spacing: -0.003em;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin-bottom: var(--spacing-md);
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
@@ -87,16 +87,16 @@
 }
 
 .latestNewsSection {
-  margin-bottom: 80px;
+  margin-bottom: var(--spacing-6xl);
 }
 
 .sectionHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: var(--spacing-3xl);
   border-bottom: 1px solid var(--border-color);
-  padding-bottom: 16px;
+  padding-bottom: var(--spacing-lg);
 }
 
 .sectionTitle {
@@ -121,8 +121,8 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 30px;
-  row-gap: 40px;
+  column-gap: var(--spacing-4xl);
+  row-gap: var(--spacing-5xl);
 }
 
 @media (min-width: 768px) {
@@ -139,26 +139,26 @@
 
 /* In the Loop Section */
 .inTheLoopSection {
-  margin-bottom: 80px;
+  margin-bottom: var(--spacing-6xl);
 }
 
 .carouselWrapper {
   position: relative;
-  margin: 0 -22px; /* Extend to screen edges on mobile */
-  padding: 0 22px;
+  margin: 0 calc(var(--spacing-lg) * -1); /* Extend to screen edges on mobile */
+  padding: 0 var(--spacing-lg);
   overflow: hidden;
 }
 
 .carousel {
   display: flex;
-  gap: 20px;
+  gap: var(--spacing-xl);
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
-  padding-bottom: 20px; /* Space for shadow */
+  padding-bottom: var(--spacing-xl); /* Space for shadow */
 }
 
 .carousel::-webkit-scrollbar {
@@ -191,7 +191,7 @@
 
 /* More from Newsroom Section */
 .moreFromNewsroomSection {
-  margin-bottom: 80px;
+  margin-bottom: var(--spacing-6xl);
 }
 
 

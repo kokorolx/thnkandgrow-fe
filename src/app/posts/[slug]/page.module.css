@@ -26,7 +26,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-md);
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-semibold);
   text-transform: uppercase;
@@ -262,7 +262,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
-  margin-top: var(--spacing-2xl);
+  margin-top: var(--spacing-3xl);
 }
 
 .authorAvatar {
@@ -330,7 +330,7 @@
 }
 
 .readMoreSection {
-  margin-top: 100px;
+  margin-top: var(--spacing-6xl);
   padding-top: var(--spacing-5xl);
   border-top: 1px solid var(--color-secondary-light);
 }
@@ -346,7 +346,7 @@
 .readMoreGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-3xl);
+  gap: var(--spacing-4xl);
 }
 
 @media (min-width: 768px) {

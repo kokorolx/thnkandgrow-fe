@@ -1,14 +1,14 @@
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 22px;
+  padding: 0 var(--spacing-lg);
 }
 
 .header {
-  margin-top: 32px;
-  margin-bottom: 64px;
+  margin-top: var(--spacing-3xl);
+  margin-bottom: var(--spacing-6xl);
   border-bottom: 1px solid var(--border-color);
-  padding-bottom: 32px;
+  padding-bottom: var(--spacing-3xl);
 }
 
 .label {
@@ -17,7 +17,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--text-color-secondary);
-  margin-bottom: 12px;
+  margin-bottom: var(--spacing-md);
   display: block;
 }
 
@@ -27,7 +27,7 @@
   line-height: 1.1;
   letter-spacing: -0.003em;
   color: var(--text-color);
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing-lg);
 }
 
 .description {
@@ -38,27 +38,27 @@
 }
 
 .description p {
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing-lg);
 }
 
 .description img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: var(--border-radius-lg);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
 }
 
 .gridSection {
-  margin-bottom: 80px;
+  margin-bottom: var(--spacing-6xl);
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 30px;
-  row-gap: 40px;
+  column-gap: var(--spacing-4xl);
+  row-gap: var(--spacing-5xl);
 }
 
 @media (min-width: 768px) {
@@ -75,7 +75,7 @@
 
 .emptyState {
   text-align: center;
-  padding: 80px 0;
+  padding: var(--spacing-6xl) 0;
 }
 
 .emptyStateText {
