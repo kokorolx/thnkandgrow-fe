@@ -148,47 +148,52 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       {/* Article Header */}
       <header className={styles.header}>
         <div className={styles.headerContent}>
-          <div className={styles.meta}>
-            {post.categories?.nodes[0] && (
-              <Link href={`/category/${post.categories.nodes[0].slug}`} className={styles.categoryLink}>
-                <span className={styles.category}>{post.categories.nodes[0].name}</span>
-              </Link>
-            )}
-            <span className={styles.separator}>•</span>
-            <span className={styles.date}>
-              {new Date(post.date).toLocaleDateString('en-US', {
-                month: 'long',
-                day: 'numeric',
-                year: 'numeric'
-              })}
-            </span>
-            <span className={styles.separator}>•</span>
-            <span className={styles.readingTime}>{calculateReadingTime(post.content || '')}</span>
-          </div>
+          {/* Category Label */}
+          {post.categories?.nodes[0] && (
+            <Link href={`/category/${post.categories.nodes[0].slug}`} className={styles.categoryLink}>
+              <span className={styles.categoryLabel}>{post.categories.nodes[0].name}</span>
+            </Link>
+          )}
 
+          {/* Date */}
+          <time className={styles.publishDate}>
+            {new Date(post.date).toLocaleDateString('en-US', {
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric'
+            })}
+          </time>
+
+          {/* Main Title */}
           <h1 className={styles.title} dangerouslySetInnerHTML={{ __html: post.title }} />
 
-          <div className={styles.author}>
-            {post.author?.node?.avatar?.url && (
-              <div className={styles.authorAvatar}>
-                <Image
-                  src={post.author.node.avatar.url}
-                  alt={post.author.node.name}
-                  fill
-                  className="object-cover rounded-full"
-                />
-              </div>
-            )}
-            <div className={styles.authorInfo}>
-              <span className={styles.by}>By</span>
-              {post.author?.node?.slug ? (
-                <Link href={`/author/${post.author.node.slug}`} className={styles.authorLink}>
-                  {post.author.node.name}
-                </Link>
-              ) : (
-                <span className={styles.authorName}>{post.author?.node?.name || 'ThnkAndGrow'}</span>
-              )}
-            </div>
+          {/* Subtitle/Excerpt */}
+          {post.excerpt && (
+            <p className={styles.subtitle} dangerouslySetInnerHTML={{ __html: post.excerpt.replace(/\u003c[^\u003e]*\u003e/g, '') }} />
+          )}
+
+          {/* Social Share Icons */}
+          <div className={styles.socialShare}>
+            <a href={`https://www.facebook.com/sharer/sharer.php?u=${typeof window !== 'undefined' ? window.location.href : ''}`} className={styles.shareButton} title="Share on Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href={`https://twitter.com/intent/tweet?url=${typeof window !== 'undefined' ? window.location.href : ''}&text=${post.title}`} className={styles.shareButton} title="Share on X" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.165-6.75-5.868 6.75h-3.308l7.73-8.835L2.56 2.25h6.772l4.684 6.201 5.428-6.201zM17.55 19.5h1.827L6.281 4.125H4.25l13.3 15.375z"/>
+              </svg>
+            </a>
+            <a href={`mailto:?subject=${post.title}&body=${typeof window !== 'undefined' ? window.location.href : ''}`} className={styles.shareButton} title="Share via Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </a>
+            <button className={styles.shareButton} title="Copy link" onClick={() => navigator.clipboard.writeText(typeof window !== 'undefined' ? window.location.href : '')}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+              </svg>
+            </button>
           </div>
         </div>
       </header>

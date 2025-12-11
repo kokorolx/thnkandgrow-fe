@@ -55,18 +55,23 @@ async function getArchitecturePosts() {
   try {
     const { data } = await client.query({
       query: GET_POSTS_BY_CATEGORY,
-      variables: { slug: 'architecture' },
+      variables: { slug: 'architecture-and-design' },
     }) as any;
-    return data?.category?.posts?.nodes || [];
+    
+    return {
+      posts: data?.category?.posts?.nodes || [],
+      categorySlug: data?.category?.slug || 'architecture-and-design',
+      categoryName: data?.category?.name || 'Architecture & Design'
+    };
   } catch (error) {
     console.error('Error fetching architecture posts:', error);
-    return [];
+    return { posts: [], categorySlug: null, categoryName: null };
   }
 }
 
 export default async function Home() {
   const posts = await getPosts();
-  const architecturePosts = await getArchitecturePosts();
+  const architectureData = await getArchitecturePosts();
   
   const featuredPost = posts[0];
   // Show 6 recent posts (excluding the hero) for the grid
@@ -77,8 +82,8 @@ export default async function Home() {
   const moreFromNewsroom = posts.slice(11, 17);
   
   // Architecture section: featured post + 3 grid posts
-  const architectureFeatured = architecturePosts[0];
-  const architectureGrid = architecturePosts.slice(1, 4);
+  const architectureFeatured = architectureData.posts[0];
+  const architectureGrid = architectureData.posts.slice(1, 4);
 
   return (
     <div className="animate-fade-in">
@@ -177,11 +182,11 @@ export default async function Home() {
       )}
 
       {/* Architecture Section */}
-      {architectureFeatured && (
+      {architectureFeatured && architectureData.categorySlug && (
         <section className={`${styles.container} ${styles.architectureSection}`}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Architecture</h2>
-            <Link href="/category/architecture" className={styles.archiveLink}>
+            <h2 className={styles.sectionTitle}>{architectureData.categoryName || 'Architecture'}</h2>
+            <Link href={`/category/${architectureData.categorySlug}`} className={styles.archiveLink}>
               View All ›
             </Link>
           </div>
