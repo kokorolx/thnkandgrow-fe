@@ -1,5 +1,19 @@
-/* Import Apple Design System */
-@import url("../styles/apple-design-system.css");
+/* Import Apple Design System - Version 2 */
+@import url("../styles/apple-design-system-v2.css");
+
+/* Global Link Styles - Remove Default Blue Color */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited,
+a:active,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
 
 /* Legacy Aliases for Backward Compatibility */
 :root {
@@ -9,7 +23,7 @@
   --accent-color: var(--color-accent-blue);
   --accent-color-hover: var(--color-accent-blue-light);
   --border-color: var(--color-secondary-light);
-  --background-alt: var(--color-semantic-primary);
+  --background-alt: var(--color-semantic-secondary);
 
   /* Typography Aliases */
   --font-family-system: var(--font-system);
@@ -17,7 +31,7 @@
   --font-family-text: var(--font-text);
 
   /* Spacing & Layout */
-  --container-width: 1200px;
+  --container-width: 980px;
   --header-height: 48px;
   --border-radius: 12px;
 }

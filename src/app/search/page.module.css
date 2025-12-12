@@ -1,49 +1,49 @@
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 22px;
+  padding: 0 var(--spacing-lg);
 }
 
 .searchHeader {
-  margin-top: 40px;
-  margin-bottom: 64px;
+  margin-top: var(--spacing-5xl);
+  margin-bottom: var(--spacing-6xl);
   border-bottom: 1px solid var(--border-color);
-  padding-bottom: 40px;
+  padding-bottom: var(--spacing-5xl);
 }
 
 .pageTitle {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.003em;
+  font-size: var(--font-size-h1-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
   color: var(--text-color);
-  margin-bottom: 40px;
+  margin-bottom: var(--spacing-5xl);
   text-align: center;
 }
 
 .quickLinks {
-  margin-top: 24px;
+  margin-top: var(--spacing-2xl);
   text-align: center;
 }
 
 .quickLinksTitle {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--text-color-secondary);
-  margin-bottom: 12px;
+  margin-bottom: var(--spacing-md);
 }
 
 .tagsWrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: var(--spacing-md);
   justify-content: center;
 }
 
 .tagLink {
-  font-size: 14px;
+  font-size: var(--font-size-small);
   color: var(--accent-color);
   text-decoration: none;
 }
@@ -53,23 +53,23 @@
 }
 
 .resultsSection {
-  margin-bottom: 80px;
+  margin-bottom: var(--spacing-5xl);
 }
 
 .resultsTitle {
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1.19048;
-  letter-spacing: -0.016em;
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-normal);
   color: var(--text-color);
-  margin-bottom: 32px;
+  margin-bottom: var(--spacing-4xl);
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 30px;
-  row-gap: 40px;
+  column-gap: var(--spacing-4xl);
+  row-gap: var(--spacing-5xl);
 }
 
 @media (min-width: 768px) {
@@ -86,10 +86,10 @@
 
 .noResults {
   text-align: center;
-  padding: 80px 0;
+  padding: var(--spacing-5xl) 0;
 }
 
 .noResultsText {
-  font-size: 17px;
+  font-size: var(--font-size-button-normal);
   color: var(--text-color-secondary);
 }

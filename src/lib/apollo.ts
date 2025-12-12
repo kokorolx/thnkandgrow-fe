@@ -14,11 +14,16 @@ const createApolloClient = (): ApolloClient => {
       ...headers,
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
       },
+    fetchOptions: {
+      timeout: 10000,
+    },
   });
 
   return new ApolloClient({
     link: httpLink,
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache({
+      resultCaching: false,
+    }),
     ssrMode: typeof window === 'undefined',
   });
 };

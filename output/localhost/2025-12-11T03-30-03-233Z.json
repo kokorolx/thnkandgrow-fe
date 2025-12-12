@@ -1,0 +1,539 @@
+{
+  "url": "http://localhost:3000/",
+  "extractedAt": "2025-12-11T03:30:03.229Z",
+  "logo": null,
+  "favicons": [
+    {
+      "type": "icon",
+      "url": "http://localhost:3000/favicon.ico?favicon.0b3bf435.ico",
+      "sizes": "256x256"
+    },
+    {
+      "type": "favicon.ico",
+      "url": "http://localhost:3000/favicon.ico",
+      "sizes": null
+    }
+  ],
+  "colors": {
+    "semantic": {},
+    "palette": [
+      {
+        "color": "rgb(29, 29, 31)",
+        "normalized": "#1d1d1f",
+        "count": 393,
+        "confidence": "high",
+        "sources": []
+      },
+      {
+        "color": "rgb(0, 102, 204)",
+        "normalized": "#0066cc",
+        "count": 116,
+        "confidence": "high",
+        "sources": []
+      },
+      {
+        "color": "rgb(232, 232, 237)",
+        "normalized": "#e8e8ed",
+        "count": 88,
+        "confidence": "high",
+        "sources": []
+      },
+      {
+        "color": "rgba(255, 255, 255, 0.8)",
+        "normalized": "#ffffff",
+        "count": 44,
+        "confidence": "high",
+        "sources": []
+      },
+      {
+        "color": "rgb(0, 113, 227)",
+        "normalized": "#0071e3",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      },
+      {
+        "color": "rgb(9, 87, 165)",
+        "normalized": "#0957a5",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      },
+      {
+        "color": "rgb(42, 42, 44)",
+        "normalized": "#2a2a2c",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      },
+      {
+        "color": "rgb(45, 45, 48)",
+        "normalized": "#2d2d30",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      },
+      {
+        "color": "rgba(232, 232, 237, 0.804)",
+        "normalized": "#e8e8ed",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      },
+      {
+        "color": "rgba(232, 232, 237, 0.8)",
+        "normalized": "#e8e8ed",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      }
+    ],
+    "cssVariables": {
+      "--color-accent-blue-light": "#0071e3",
+      "--accent-color": "#06c",
+      "--color-primary-black": "#000",
+      "--color-primary-white": "#fff",
+      "--color-gray": "#6e6e73",
+      "--color-semantic-primary": "#f5f5f7"
+    }
+  },
+  "typography": {
+    "styles": [
+      {
+        "context": "heading-1",
+        "family": "SF Pro Display",
+        "fallbacks": "-apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial",
+        "size": "40px (2.50rem)",
+        "weight": 700,
+        "lineHeight": "1.10",
+        "spacing": "-0.12px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Display",
+        "fallbacks": "-apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial",
+        "size": "32px (2.00rem)",
+        "weight": 700,
+        "lineHeight": "1.10",
+        "spacing": "-0.096px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "Inter",
+        "fallbacks": "Inter Fallback",
+        "size": "19px (1.19rem)",
+        "weight": 600,
+        "lineHeight": "1.50",
+        "spacing": "-0.19px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "SF Pro Display",
+        "fallbacks": "-apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial",
+        "size": "19px (1.19rem)",
+        "weight": 700,
+        "lineHeight": "1.20",
+        "spacing": "0.231px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "Inter",
+        "fallbacks": "Inter Fallback",
+        "size": "17px (1.06rem)",
+        "weight": 400,
+        "lineHeight": "1.50",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "Inter",
+        "fallbacks": "Inter Fallback",
+        "size": "16px (1.00rem)",
+        "weight": 400,
+        "lineHeight": "1.50",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "Inter",
+        "fallbacks": "Inter Fallback",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.50",
+        "spacing": "-0.12px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "Inter",
+        "fallbacks": "Inter Fallback",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.50",
+        "spacing": "-0.12px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "Inter",
+        "fallbacks": "Inter Fallback",
+        "size": "12px (0.75rem)",
+        "weight": 700,
+        "lineHeight": "1.50",
+        "spacing": "0.48px",
+        "transform": "uppercase"
+      },
+      {
+        "context": "caption",
+        "family": "Inter",
+        "fallbacks": "Inter Fallback",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.50",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "Inter",
+        "fallbacks": "Inter Fallback",
+        "size": "12px (0.75rem)",
+        "weight": 500,
+        "lineHeight": "1.50",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "Inter",
+        "fallbacks": "Inter Fallback",
+        "size": "12px (0.75rem)",
+        "weight": 400,
+        "lineHeight": "1.50",
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "SF Pro Display",
+        "fallbacks": "-apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial",
+        "size": "12px (0.75rem)",
+        "weight": 600,
+        "lineHeight": "1.13",
+        "spacing": "0.231px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "Inter",
+        "fallbacks": "Inter Fallback",
+        "size": "11px (0.69rem)",
+        "weight": 700,
+        "lineHeight": "1.50",
+        "spacing": "0.66px",
+        "transform": "uppercase"
+      }
+    ],
+    "sources": {
+      "googleFonts": [],
+      "adobeFonts": false,
+      "variableFonts": false
+    }
+  },
+  "spacing": {
+    "scaleType": "8px",
+    "commonValues": [
+      {
+        "px": "0.015625px",
+        "rem": "0.00rem",
+        "count": 5,
+        "numericValue": 0.015625
+      },
+      {
+        "px": "0.5625px",
+        "rem": "0.04rem",
+        "count": 3,
+        "numericValue": 0.5625
+      },
+      {
+        "px": "4px",
+        "rem": "0.25rem",
+        "count": 2,
+        "numericValue": 4
+      },
+      {
+        "px": "8px",
+        "rem": "0.50rem",
+        "count": 145,
+        "numericValue": 8
+      },
+      {
+        "px": "9px",
+        "rem": "0.56rem",
+        "count": 6,
+        "numericValue": 9
+      },
+      {
+        "px": "10px",
+        "rem": "0.63rem",
+        "count": 1,
+        "numericValue": 10
+      },
+      {
+        "px": "12px",
+        "rem": "0.75rem",
+        "count": 6,
+        "numericValue": 12
+      },
+      {
+        "px": "16px",
+        "rem": "1.00rem",
+        "count": 4,
+        "numericValue": 16
+      },
+      {
+        "px": "17px",
+        "rem": "1.06rem",
+        "count": 1,
+        "numericValue": 17
+      },
+      {
+        "px": "20px",
+        "rem": "1.25rem",
+        "count": 26,
+        "numericValue": 20
+      },
+      {
+        "px": "22.7969px",
+        "rem": "1.42rem",
+        "count": 1,
+        "numericValue": 22.7969
+      },
+      {
+        "px": "22.8125px",
+        "rem": "1.43rem",
+        "count": 1,
+        "numericValue": 22.8125
+      },
+      {
+        "px": "32px",
+        "rem": "2.00rem",
+        "count": 6,
+        "numericValue": 32
+      },
+      {
+        "px": "34px",
+        "rem": "2.13rem",
+        "count": 1,
+        "numericValue": 34
+      },
+      {
+        "px": "40px",
+        "rem": "2.50rem",
+        "count": 1,
+        "numericValue": 40
+      },
+      {
+        "px": "48px",
+        "rem": "3.00rem",
+        "count": 25,
+        "numericValue": 48
+      },
+      {
+        "px": "64px",
+        "rem": "4.00rem",
+        "count": 6,
+        "numericValue": 64
+      }
+    ]
+  },
+  "borderRadius": {
+    "values": [
+      {
+        "value": "12px",
+        "count": 28,
+        "elements": [
+          "div",
+          "Toggle menu",
+          "image"
+        ],
+        "confidence": "high",
+        "numericValue": 12
+      },
+      {
+        "value": "24px",
+        "count": 2,
+        "elements": [
+          "a"
+        ],
+        "confidence": "low",
+        "numericValue": 24
+      }
+    ]
+  },
+  "borders": {
+    "combinations": [
+      {
+        "width": "0px 0px 1px",
+        "style": "none none solid",
+        "color": "rgb(29, 29, 31)",
+        "count": 6,
+        "elements": [
+          "header",
+          "div",
+          "card"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "width": "0px 1px 0px 0px",
+        "style": "none solid none none",
+        "color": "rgb(29, 29, 31)",
+        "count": 2,
+        "elements": [
+          "card"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "1px 0px 0px",
+        "style": "solid none none",
+        "color": "rgb(232, 232, 237)",
+        "count": 2,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "0px 1px 1px 0px",
+        "style": "none solid solid none",
+        "color": "rgb(29, 29, 31)",
+        "count": 1,
+        "elements": [
+          "card"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "0px 0px 1px",
+        "style": "none none solid",
+        "color": "rgb(110, 110, 115)",
+        "count": 1,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low"
+      }
+    ]
+  },
+  "shadows": [
+    {
+      "shadow": "rgba(0, 0, 0, 0.15) 0px 4px 12px 0px",
+      "count": 3,
+      "confidence": "medium"
+    }
+  ],
+  "components": {
+    "buttons": [],
+    "inputs": {
+      "text": [],
+      "checkbox": [],
+      "radio": [],
+      "select": []
+    },
+    "links": [
+      {
+        "color": "rgb(29, 29, 31)",
+        "textDecoration": "none",
+        "fontWeight": "600",
+        "states": {
+          "default": {
+            "color": "rgb(29, 29, 31)",
+            "textDecoration": "none"
+          },
+          "hover": {
+            "color": "var(--color-accent-blue-light)",
+            "textDecoration": "none"
+          }
+        }
+      },
+      {
+        "color": "rgb(110, 110, 115)",
+        "textDecoration": "none",
+        "fontWeight": "400",
+        "states": {
+          "default": {
+            "color": "rgb(110, 110, 115)",
+            "textDecoration": "none"
+          },
+          "hover": {
+            "color": "var(--text-color)",
+            "textDecoration": "none"
+          }
+        }
+      },
+      {
+        "color": "rgb(0, 102, 204)",
+        "textDecoration": "none",
+        "fontWeight": "400",
+        "states": {
+          "default": {
+            "color": "rgb(0, 102, 204)",
+            "textDecoration": "none"
+          },
+          "hover": {
+            "color": "var(--color-accent-blue-light)",
+            "textDecoration": "underline"
+          }
+        }
+      }
+    ]
+  },
+  "breakpoints": [
+    {
+      "px": "480px"
+    },
+    {
+      "px": "767px"
+    },
+    {
+      "px": "768px"
+    },
+    {
+      "px": "833px"
+    },
+    {
+      "px": "1024px"
+    },
+    {
+      "px": "1068px"
+    },
+    {
+      "px": "1440px"
+    },
+    {
+      "px": "1632px"
+    }
+  ],
+  "iconSystem": [],
+  "frameworks": []
+}

@@ -1,5 +1,6 @@
 import { getApolloClient } from '@/lib/apollo';
 import { GET_GENERAL_SETTINGS, GET_CATEGORIES } from '@/lib/queries';
+import { getCachedData, isCacheValid } from '@/lib/cache';
 import HeaderClient from './HeaderClient';
 
 interface Category {
@@ -18,16 +19,46 @@ interface Category {
 }
 
 export default async function Header() {
-  const client = getApolloClient();
+  let blogName = 'Newsroom';
+  let rawCategories: Category[] = [];
 
-  // Fetch data server-side
-  const [settingsData, categoriesData] = await Promise.all([
-    client.query({ query: GET_GENERAL_SETTINGS }),
-    client.query({ query: GET_CATEGORIES }),
-  ]);
+  // Try to use cache first
+  const useCache = isCacheValid();
+  if (useCache) {
+    try {
+      const cachedData = getCachedData();
+      if (cachedData) {
+        console.log('📦 Using cached GraphQL data for Header');
+        blogName = cachedData.settings?.title || 'Newsroom';
+        rawCategories = cachedData.categories || [];
+      } else {
+        throw new Error('Cache data is null');
+      }
+    } catch (error) {
+      console.warn('⚠️ Failed to use cache, falling back to GraphQL:', error);
+      // Fall through to GraphQL fetch
+    }
+  }
 
-  const blogName = (settingsData.data as any)?.generalSettings?.title || 'Newsroom';
-  const rawCategories: Category[] = (categoriesData.data as any)?.categories?.nodes || [];
+  // If cache is not used or failed, fetch from GraphQL
+  if (!useCache || !blogName || rawCategories.length === 0) {
+    try {
+      console.log('🔄 Fetching from GraphQL API');
+      const client = getApolloClient();
+      const [settingsData, categoriesData] = await Promise.all([
+        client.query({ query: GET_GENERAL_SETTINGS }),
+        client.query({ query: GET_CATEGORIES }),
+      ]);
+
+      blogName = (settingsData.data as any)?.generalSettings?.title || 'Newsroom';
+      rawCategories = (categoriesData.data as any)?.categories?.nodes || [];
+    } catch (error) {
+      console.error('❌ Failed to fetch from GraphQL:', error);
+      // Use fallback values
+      blogName = 'Newsroom';
+      rawCategories = [];
+    }
+  }
 
   // Build hierarchical structure
   const categoryMap = new Map<string, Category & { children: Category[] }>();
@@ -48,17 +79,17 @@ export default async function Header() {
     }
   });
 
-  // Define curated menu structure
-  const curatedMenuSlugs = [
-    'architecture-design-system-security',
+  // Define fixed menu structure in order
+  const menuOrder = [
+    'architecture-and-design',
     'database',
+    'ruby-on-rails',
     'nodejs',
-    'ruby-rails',
     'tips'
   ];
 
-  // Organize categories into curated menu
-  const curatedCategories = curatedMenuSlugs
+  // Organize categories into menu items
+  const menuCategories = menuOrder
     .map(slug => {
       const category = Array.from(categoryMap.values()).find(cat => cat.slug === slug);
       return category ? {
@@ -71,25 +102,28 @@ export default async function Header() {
     })
     .filter(Boolean);
 
-  // Get all other categories (not in curated list and not children of curated categories)
-  const curatedIds = new Set(curatedCategories.map(cat => cat!.id));
-  const curatedChildrenIds = new Set(
-    curatedCategories.flatMap(cat => cat!.children.map(child => child.id))
+  // Get all other categories (not in menu list and not children of menu categories)
+  const menuIds = new Set(menuCategories.map(cat => cat!.id));
+  const menuChildrenIds = new Set(
+    menuCategories.flatMap(cat => cat!.children.map(child => child.id))
   );
 
   const otherCategories = Array.from(categoryMap.values())
-    .filter(cat => !cat.parentId && !curatedIds.has(cat.id) && !curatedChildrenIds.has(cat.id))
+    .filter(cat => !cat.parentId && !menuIds.has(cat.id) && !menuChildrenIds.has(cat.id))
     .map(cat => ({
       id: cat.id,
       name: cat.name,
       slug: cat.slug,
       parentId: cat.parentId,
       children: cat.children,
-    }));
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
 
+  // This component is server-side, so we pass categories to client
+  // currentCategory will be determined client-side based on pathname
   return <HeaderClient
     blogName={blogName}
-    curatedCategories={curatedCategories as any}
+    menuCategories={menuCategories as any}
     otherCategories={otherCategories}
   />;
 }

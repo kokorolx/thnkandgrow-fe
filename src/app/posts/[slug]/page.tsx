@@ -13,8 +13,11 @@ import styles from './page.module.css';
 // Revalidate every 7 days
 export const revalidate = 604800;
 
-// Generate other pages on-demand
+// Generate other pages on-demand instead of at build time
 export const dynamicParams = true;
+
+// Skip static generation at build time, generate on-demand
+export const dynamic = 'force-dynamic';
 
 export async function generateStaticParams() {
   const client = getApolloClient();

@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack -p 9999",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 9999",
     "lint": "next lint",
+    "cache:download": "ts-node scripts/cache-graphql-data.ts",
+    "build:cached": "npm run cache:download && npm run build",
     "warm-cache": "node scripts/warm-cache.mjs",
     "build:warm": "npm run build && npm run warm-cache"
   },
@@ -24,6 +26,7 @@
     "dotenv": "^17.2.3",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }

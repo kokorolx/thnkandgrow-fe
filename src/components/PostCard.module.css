@@ -3,6 +3,7 @@
   flex-direction: column;
   height: 100%;
   background-color: var(--background-color);
+  padding: 0;
 }
 
 .imageLink {
@@ -13,7 +14,7 @@
   border-radius: var(--border-radius-lg); /* Subtle rounding */
   overflow: hidden;
   background-color: var(--background-alt);
-  margin-bottom: var(--spacing-xl);
+  margin: calc(var(--spacing-lg) * -1) calc(var(--spacing-lg) * -1) var(--spacing-lg);
 }
 
 .image {
@@ -29,6 +30,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: var(--spacing-lg);
 }
 
 .categoryWrapper {

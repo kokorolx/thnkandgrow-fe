@@ -69,9 +69,29 @@ async function getArchitecturePosts() {
   }
 }
 
+async function getDatabasePosts() {
+  const client = getApolloClient();
+  try {
+    const { data } = await client.query({
+      query: GET_POSTS_BY_CATEGORY,
+      variables: { slug: 'database' },
+    }) as any;
+    
+    return {
+      posts: data?.category?.posts?.nodes || [],
+      categorySlug: data?.category?.slug || 'database',
+      categoryName: data?.category?.name || 'Database'
+    };
+  } catch (error) {
+    console.error('Error fetching database posts:', error);
+    return { posts: [], categorySlug: null, categoryName: null };
+  }
+}
+
 export default async function Home() {
   const posts = await getPosts();
   const architectureData = await getArchitecturePosts();
+  const databaseData = await getDatabasePosts();
   
   const featuredPost = posts[0];
   // Show 6 recent posts (excluding the hero) for the grid
@@ -244,6 +264,38 @@ export default async function Home() {
               ))}
             </div>
           )}
+        </section>
+      )}
+
+      {/* More from Database Section */}
+      {databaseData.posts.length > 0 && (
+        <section className={`${styles.container} ${styles.moreFromNewsroomSection}`}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>More from {databaseData.categoryName || 'Database'}</h2>
+            <Link href={`/category/${databaseData.categorySlug}`} className={styles.archiveLink}>
+              View All ›
+            </Link>
+          </div>
+          <div className={styles.databaseGrid}>
+            {databaseData.posts.slice(0, 6).map((post: any) => (
+              <PostCard
+                key={post.id}
+                title={post.title}
+                excerpt={post.excerpt}
+                slug={post.slug}
+                date={post.date}
+                author={{
+                  name: post.author.node.name,
+                  slug: post.author.node.slug,
+                  avatar: post.author.node.avatar?.url
+                }}
+                coverImage={post.featuredImage?.node?.sourceUrl}
+                category={post.categories?.nodes[0]?.name}
+                categorySlug={post.categories?.nodes[0]?.slug}
+                readingTime={calculateReadingTime(post.content || '')}
+              />
+            ))}
+          </div>
         </section>
       )}
 

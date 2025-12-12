@@ -1,71 +1,71 @@
 .container {
   max-width: 980px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: var(--spacing-5xl) var(--spacing-xl);
 }
 
 .header {
-  margin-bottom: 60px;
+  margin-bottom: var(--spacing-6xl);
   text-align: center;
 }
 
 .title {
-  font-size: 48px;
-  line-height: 1.08349;
-  font-weight: 600;
-  letter-spacing: -0.003em;
-  color: #1d1d1f;
-  margin: 0 0 12px 0;
+  font-size: var(--font-size-h1-xl);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--spacing-md) 0;
 }
 
 .subtitle {
-  font-size: 21px;
-  line-height: 1.381;
-  font-weight: 500;
-  letter-spacing: 0.011em;
-  color: #6e6e73;
-  margin: 0 0 16px 0;
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-gray);
+  margin: 0 0 var(--spacing-lg) 0;
 }
 
 .intro {
-  font-size: 17px;
-  line-height: 1.47059;
-  font-weight: 400;
-  letter-spacing: -0.022em;
-  color: #86868b;
+  font-size: var(--font-size-button-normal);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-gray);
   margin: 0;
 }
 
 .section {
-  margin-bottom: 60px;
+  margin-bottom: var(--spacing-6xl);
 }
 
 .sectionTitle {
-  font-size: 28px;
-  line-height: 1.14286;
-  font-weight: 600;
-  letter-spacing: 0.007em;
-  color: #1d1d1f;
-  margin: 0 0 24px 0;
+  font-size: var(--font-size-button-large);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--spacing-2xl) 0;
 }
 
 .description {
-  font-size: 17px;
-  line-height: 1.47059;
-  font-weight: 400;
-  letter-spacing: -0.022em;
-  color: #1d1d1f;
-  margin: 0 0 16px 0;
+  font-size: var(--font-size-button-normal);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--spacing-lg) 0;
 }
 
 .link {
-  color: #0071e3;
+  color: var(--color-semantic-focus);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color var(--transition-normal);
 }
 
 .link:hover {
-  color: #0077ed;
+  color: var(--color-accent-blue-light);
   text-decoration: underline;
 }
 
@@ -76,13 +76,13 @@
 }
 
 .list li {
-  font-size: 17px;
-  line-height: 1.47059;
-  font-weight: 400;
-  letter-spacing: -0.022em;
-  color: #1d1d1f;
-  margin-bottom: 16px;
-  padding-left: 24px;
+  font-size: var(--font-size-button-normal);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-lg);
+  padding-left: var(--spacing-2xl);
   position: relative;
 }
 
@@ -90,26 +90,26 @@
   content: '•';
   position: absolute;
   left: 0;
-  color: #0071e3;
-  font-weight: 600;
+  color: var(--color-semantic-focus);
+  font-weight: var(--font-weight-semibold);
 }
 
 .list li strong {
-  font-weight: 600;
-  color: #1d1d1f;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark);
 }
 
 .certGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 24px;
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-2xl);
 }
 
 .certItem {
   text-align: center;
   width: 100px;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-slow);
 }
 
 .certItem:hover {
@@ -121,7 +121,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-sm);
 }
 
 .certItem img {
@@ -129,7 +129,7 @@
   height: 80px;
   object-fit: contain;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-  transition: filter 0.3s ease;
+  transition: filter var(--transition-slow);
 }
 
 .certItem:hover img {
@@ -137,18 +137,18 @@
 }
 
 .certItem span {
-  font-size: 12px;
-  font-weight: 600;
-  color: #6e6e73;
-  background: #f5f5f7;
-  padding: 4px 8px;
-  border-radius: 12px;
-  transition: all 0.3s ease;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray);
+  background: var(--color-semantic-primary);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-lg);
+  transition: all var(--transition-slow);
 }
 
 .certItem:hover span {
   color: #fff;
-  background: #0071e3;
+  background: var(--color-semantic-focus);
 }
 
 .timeline {
@@ -167,9 +167,9 @@
   background: linear-gradient(
     to bottom,
     transparent,
-    #0071e3 10%,
-    #0077ed 50%,
-    #0071e3 90%,
+    var(--color-semantic-focus) 10%,
+    var(--color-accent-blue-light) 50%,
+    var(--color-semantic-focus) 90%,
     transparent
   );
   box-shadow: 0 0 10px rgba(0, 113, 227, 0.3);
@@ -189,11 +189,11 @@
 
 .timelineItem {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: var(--spacing-6xl);
   opacity: 0;
   transform: translateX(-30px) rotateY(-5deg);
   animation: slideIn 0.6s ease-out forwards;
-  transition: all 0.3s ease;
+  transition: all var(--transition-slow);
 }
 
 .timelineItem:nth-child(1) {
@@ -232,13 +232,13 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #0071e3, #0077ed);
+  background: linear-gradient(135deg, var(--color-semantic-focus), var(--color-accent-blue-light));
   border: 4px solid #fff;
   box-shadow:
     0 0 0 3px rgba(0, 113, 227, 0.2),
     0 4px 12px rgba(0, 113, 227, 0.4),
     inset 0 -2px 4px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  transition: all var(--transition-slow);
   animation: glow 2s ease-in-out infinite;
 }
 
@@ -277,9 +277,9 @@
     rgba(0, 113, 227, 0.03),
     rgba(0, 119, 237, 0.05)
   );
-  border-radius: 16px;
+  border-radius: var(--border-radius-xl);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-slow);
   z-index: -1;
   box-shadow: 0 10px 40px rgba(0, 113, 227, 0.1);
 }
@@ -289,18 +289,18 @@
 }
 
 .year {
-  font-size: 21px;
-  line-height: 1.381;
-  font-weight: 600;
-  letter-spacing: 0.011em;
-  background: linear-gradient(135deg, #0071e3, #0077ed);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-normal);
+  background: linear-gradient(135deg, var(--color-semantic-focus), var(--color-accent-blue-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin: 0 0 8px 0;
+  margin: 0 0 var(--spacing-sm) 0;
   display: inline-block;
   position: relative;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-slow);
 }
 
 .timelineItem:hover .year {
@@ -314,8 +314,8 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #0071e3, #0077ed);
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, var(--color-semantic-focus), var(--color-accent-blue-light));
+  transition: width var(--transition-slow);
 }
 
 .timelineItem:hover .year::after {
@@ -323,61 +323,61 @@
 }
 
 .timelineTitle {
-  font-size: 19px;
-  line-height: 1.42105;
-  font-weight: 600;
-  letter-spacing: 0.012em;
-  color: #1d1d1f;
-  margin: 0 0 16px 0;
-  transition: color 0.3s ease;
+  font-size: var(--font-size-h1-small);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--spacing-lg) 0;
+  transition: color var(--transition-slow);
 }
 
 .timelineItem:hover .timelineTitle {
-  color: #0071e3;
+  color: var(--color-semantic-focus);
 }
 
 @media (max-width: 1068px) {
   .container {
-    padding: 60px 20px;
+    padding: var(--spacing-6xl) var(--spacing-xl);
   }
 
   .title {
-    font-size: 40px;
+    font-size: var(--font-size-h1-display);
   }
 
   .subtitle {
-    font-size: 19px;
+    font-size: var(--font-size-h1-small);
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 40px 16px;
+    padding: var(--spacing-5xl) var(--spacing-lg);
   }
 
   .header {
-    margin-bottom: 40px;
+    margin-bottom: var(--spacing-5xl);
   }
 
   .title {
-    font-size: 32px;
+    font-size: var(--font-size-h1-display);
   }
 
   .subtitle {
-    font-size: 17px;
+    font-size: var(--font-size-button-normal);
   }
 
   .intro {
-    font-size: 15px;
+    font-size: var(--font-size-body);
   }
 
   .sectionTitle {
-    font-size: 24px;
+    font-size: var(--font-size-h1-small);
   }
 
   .description,
   .list li {
-    font-size: 16px;
+    font-size: var(--font-size-body);
   }
 
   .timeline {

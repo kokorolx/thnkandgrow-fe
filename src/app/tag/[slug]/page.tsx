@@ -9,6 +9,9 @@ import styles from '../../archive.module.css';
 // Revalidate every 7 days
 export const revalidate = 604800;
 
+// Skip static generation at build time, generate on-demand
+export const dynamic = 'force-dynamic';
+
 export async function generateStaticParams() {
   const client = getApolloClient();
 

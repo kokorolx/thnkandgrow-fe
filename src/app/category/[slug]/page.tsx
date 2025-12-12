@@ -9,6 +9,9 @@ import styles from '../../archive.module.css';
 // Revalidate every 7 days
 export const revalidate = 604800;
 
+// Skip static generation at build time, generate on-demand
+export const dynamic = 'force-dynamic';
+
 export async function generateStaticParams() {
   const client = getApolloClient();
 
@@ -107,20 +110,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="animate-fade-in">
-      {/* Category Header */}
-      <section className={styles.container}>
-        <div className={styles.header}>
-          <span className={styles.label}>Category</span>
-          <h1 className={styles.title}>{category.name}</h1>
-          {category.description && (
-            <div
-              className={styles.description}
-              dangerouslySetInnerHTML={{ __html: category.description }}
-            />
-          )}
-        </div>
-      </section>
-
       {/* Posts Grid */}
       <section className={`${styles.container} ${styles.gridSection}`}>
         {posts.length > 0 ? (
