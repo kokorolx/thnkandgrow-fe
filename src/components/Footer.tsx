@@ -115,7 +115,7 @@ export default async function Footer() {
         <div className={styles.bottomSection}>
           <div className={styles.bottomContent}>
             <p className={styles.bottomText}>
-              More ways to shop: <Link href="/contact" className={styles.bottomLink}>Contact us</Link> or call 1-800-MY-BLOG.
+              More ways to stay connected: <Link href="/contact" className={styles.bottomLink}>Contact us</Link> or visit us on social media.
             </p>
           </div>
         </div>
@@ -123,7 +123,6 @@ export default async function Footer() {
         {/* Copyright Bar */}
         <div className={styles.copyrightBar}>
           <div className={styles.copyrightContent}>
-            <p className={styles.copyright}>Copyright © {currentYear} {blogName} Inc. All rights reserved.</p>
             <div className={styles.legalLinks}>
               <Link href="/privacy" className={styles.legalLink}>Privacy Policy</Link>
               <span className={styles.divider}>|</span>
@@ -131,6 +130,7 @@ export default async function Footer() {
               <span className={styles.divider}>|</span>
               <Link href="/sitemap.xml" className={styles.legalLink}>Site Map</Link>
             </div>
+            <p className={styles.copyright}>Copyright © {currentYear} {blogName}. All rights reserved.</p>
             <div className={styles.countrySelector}>
               <span>United States</span>
             </div>

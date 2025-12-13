@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ThnkAndGrow Blog
 
-## Getting Started
+A modern, high-performance blog platform built with [Next.js](https://nextjs.org) 16 and a headless WordPress CMS. Features a pixel-perfect Apple Newsroom-inspired design with advanced functionality like Text-to-Speech reading and Incremental Static Regeneration.
 
-First, run the development server:
+## Features
 
+- **Next.js 16 App Router** - Latest Next.js framework with Turbopack
+- **Headless WordPress CMS** - Content management via GraphQL (WPGraphQL)
+- **Incremental Static Regeneration (ISR)** - Fast page loads with fresh content
+- **Text-to-Speech Reader** - Built-in audio reading with progress tracking
+- **SEO Optimized** - Robots.txt, Sitemaps, Structured Data, Open Graph
+- **Responsive Design** - Modern design inspired by Apple Newsroom
+- **TypeScript** - Full type safety
+- **Apollo Client** - Efficient GraphQL data fetching
+- **CSS Modules** - Scoped component styling
+- **Image Optimization** - CDN support with CloudFront
+
+## Quick Start
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+- WordPress site with WPGraphQL plugin
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/thnkandgrow-fe.git
+cd thnkandgrow-fe
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables (see [Setup Guide](./SETUP.md)):
+```bash
+cp .env.example .env.local
+# Edit .env.local with your configuration
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:9999](http://localhost:9999) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **[Setup Guide](./SETUP.md)** - Detailed setup and configuration instructions
+- **[Contributing Guide](./CONTRIBUTING.md)** - How to contribute to the project
+- **[Environment Variables](./SETUP.md#environment-variables)** - Configuration reference
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+src/
+├── app/              # Next.js app directory pages and layouts
+│   ├── api/         # API routes
+│   ├── posts/       # Blog post pages
+│   ├── portfolio/   # Portfolio showcase
+│   └── layout.tsx   # Root layout
+├── components/       # React components
+├── lib/             # Utilities and configurations
+│   ├── apollo.ts    # Apollo Client setup
+│   └── queries.ts   # GraphQL queries
+├── data/            # Static data and portfolio
+└── styles/          # Global styles
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Available Commands
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Development
+npm run dev                 # Start dev server with Turbopack
+
+# Production
+npm run build              # Build for production
+npm run start              # Start production server
+
+# Utilities
+npm run lint              # Run ESLint
+npm run cache:download    # Download GraphQL data to cache
+npm run build:cached      # Build with cached data
+npm run warm-cache        # Warm the cache
+npm run build:warm        # Build and warm cache
+```
+
+## Technologies
+
+- **Frontend**: React 19, Next.js 16, TypeScript
+- **CMS**: WordPress with WPGraphQL
+- **Data Fetching**: Apollo Client
+- **Styling**: CSS Modules
+- **Deployment**: Vercel (recommended) or self-hosted
+
+## Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details on:
+- Code standards
+- Pull request process
+- Commit message guidelines
+- Development workflow
+
+## Deployment
+
+### Vercel (Recommended)
+The easiest way to deploy is with [Vercel](https://vercel.com):
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Add environment variables in dashboard
+4. Auto-deploy on every push
+
+### Self-Hosted
+```bash
+npm run build
+npm start
+```
+
+See [Setup Guide - Deployment](./SETUP.md#deployment) for more options.
+
+## Troubleshooting
+
+See [Setup Guide - Troubleshooting](./SETUP.md#troubleshooting) for common issues.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+## Support
+
+- 📖 [Documentation](./SETUP.md)
+- 🐛 [Report Issues](https://github.com/yourusername/thnkandgrow-fe/issues)
+- 💬 [Discussions](https://github.com/yourusername/thnkandgrow-fe/discussions)
+
+## Acknowledgments
+
+- Design inspired by [Apple Newsroom](https://www.apple.com/newsroom/)
+- Built with [Next.js](https://nextjs.org) and [WordPress](https://wordpress.org)
+- Hosted on [Vercel](https://vercel.com)

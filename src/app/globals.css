@@ -47,3 +47,7 @@ a:focus {
     --background-alt: var(--color-semantic-primary);
   }
 }
+
+.animate-fade-in {
+  margin-top: 40px;
+}

@@ -24,7 +24,7 @@ interface StructuredDataProps {
 
 export default function StructuredData({ type = 'website', article, breadcrumbs }: StructuredDataProps) {
   const getSchema = () => {
-    const baseUrl = 'https://blog.thnkandgrow.com';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://blog.thnkandgrow.com';
 
     switch (type) {
       case 'article':

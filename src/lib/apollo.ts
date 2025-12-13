@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache, HttpLink, NormalizedCacheObject } from '@apollo/client';
+import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 
 const createApolloClient = (): ApolloClient => {
   const headers: Record<string, string> = {};

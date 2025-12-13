@@ -11,6 +11,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = getApolloClient();
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://blog.thnkandgrow.com';
 
   try {
     const { data } = await client.query({
@@ -27,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
     }
 
     return {
-      metadataBase: new URL('https://blog.thnkandgrow.com'),
+      metadataBase: new URL(baseUrl),
       title: {
         default: settings.title || 'ThnkAndGrow',
         template: `%s | ${settings.title || 'ThnkAndGrow'}`
@@ -39,7 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
       openGraph: {
         title: settings.title || 'ThnkAndGrow',
         description: settings.description || 'Thoughts on growth, technology, and life.',
-        url: 'https://blog.thnkandgrow.com',
+        url: baseUrl,
         siteName: settings.title || 'ThnkAndGrow',
         type: 'website',
         locale: settings.language || 'en_US',

@@ -3,7 +3,7 @@ import { getApolloClient } from '@/lib/apollo';
 import { GET_ALL_POST_SLUGS, GET_CATEGORIES, GET_TAGS, GET_USERS } from '@/lib/queries';
 import { getPortfolioProjects } from '@/data/portfolio';
 
-const BASE_URL = 'https://blog.thnkandgrow.com';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://blog.thnkandgrow.com';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const client = getApolloClient();

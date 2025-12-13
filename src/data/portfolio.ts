@@ -47,7 +47,7 @@ export const portfolioProjects: PortfolioProject[] = [
     category: 'Web Development',
     date: '2025-01-15',
     links: {
-      demo: 'https://blog.thnkandgrow.com',
+      demo: process.env.NEXT_PUBLIC_BASE_URL || 'https://blog.thnkandgrow.com',
       github: 'https://github.com/yourusername/thnkandgrow-blog',
     },
     featured: true,

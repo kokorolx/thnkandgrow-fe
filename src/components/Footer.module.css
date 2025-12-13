@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--background-alt);
-  color: var(--text-color-secondary);
+  background-color: #1d1d1f;
+  color: rgba(255, 255, 255, 0.8);
   font-size: var(--font-size-caption);
   padding-top: var(--spacing-5xl);
   padding-bottom: var(--spacing-xl);
@@ -14,7 +14,7 @@
 }
 
 .breadcrumbs {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: var(--spacing-sm);
   margin-bottom: var(--spacing-lg);
   display: flex;
@@ -23,17 +23,17 @@
 }
 
 .breadcrumbLink {
-  color: var(--text-color-secondary);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
 }
 
 .breadcrumbLink:hover {
   text-decoration: underline;
-  color: var(--text-color);
+  color: #ffffff;
 }
 
 .separator {
-  color: var(--text-color-secondary);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .grid {
@@ -56,7 +56,7 @@
 }
 
 .columnTitle {
-  color: var(--text-color);
+  color: #ffffff;
   font-weight: var(--font-weight-semibold);
   margin-bottom: var(--spacing-sm);
   font-size: var(--font-size-caption);
@@ -72,7 +72,7 @@
 }
 
 .link {
-  color: var(--text-color-secondary);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   line-height: var(--line-height-normal);
   display: block;
@@ -80,11 +80,11 @@
 
 .link:hover {
   text-decoration: underline;
-  color: var(--text-color);
+  color: #ffffff;
 }
 
 .bottomSection {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: var(--spacing-lg);
   display: flex;
   flex-direction: column;
@@ -99,12 +99,12 @@
 .bottomText {
   font-size: var(--font-size-caption);
   line-height: var(--line-height-normal);
-  color: var(--text-color-secondary);
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
 .bottomLink {
-  color: var(--accent-color);
+  color: #0071e3;
   text-decoration: none;
 }
 
@@ -114,10 +114,10 @@
 
 /* Copyright Bar - Separate bottom bar */
 .copyrightBar {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: var(--spacing-sm) 0;
   margin-top: var(--spacing-sm);
-  background-color: var(--background-color);
+  background-color: #0a0a0a;
 }
 
 .copyrightContent {
@@ -131,7 +131,7 @@
 .copyright {
   font-size: var(--font-size-caption);
   line-height: var(--line-height-normal);
-  color: var(--text-color-secondary);
+  color: rgba(255, 255, 255, 0.5);
   margin: 0;
 }
 
@@ -143,23 +143,23 @@
 }
 
 .legalLink {
-  color: var(--text-color-secondary);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   transition: color var(--transition-normal);
 }
 
 .legalLink:hover {
-  color: var(--text-color);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .divider {
-  color: var(--text-color-secondary);
+  color: rgba(255, 255, 255, 0.3);
   user-select: none;
 }
 
 .countrySelector {
   font-size: 12px;
-  color: var(--text-color-secondary);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {
