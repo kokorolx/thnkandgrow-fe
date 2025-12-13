@@ -1,14 +1,16 @@
 import { getApolloClient } from '@/lib/apollo';
 import { GET_ALL_POSTS, GET_RECENT_POSTS, GET_CATEGORIES, GET_GENERAL_SETTINGS, GET_POSTS_BY_CATEGORY } from '@/lib/queries';
 import PostCard from '@/components/PostCard';
+import ImageWithFallback from '@/components/ImageWithFallback';
 import { calculateReadingTime } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 
-// Revalidate every 3 days
+// Static generation with ISR - revalidate every 3 days (259200 seconds)
 export const revalidate = 259200;
+export const dynamic = 'force-static';
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = getApolloClient();
@@ -112,12 +114,13 @@ export default async function Home() {
         <section className={`${styles.container} ${styles.heroSection}`}>
           <Link href={`/posts/${featuredPost.slug}`} className={styles.heroLink}>
              {featuredPost.featuredImage?.node?.sourceUrl ? (
-               <Image
+               <ImageWithFallback
                  src={featuredPost.featuredImage.node.sourceUrl}
                  alt={featuredPost.title}
                  fill
                  className={styles.heroImage}
                  priority
+                 fallback="/images/placeholder.svg"
                />
              ) : (
                <div className="w-full h-full bg-gray-200" />
@@ -214,12 +217,13 @@ export default async function Home() {
           {/* Featured Card */}
           <Link href={`/posts/${architectureFeatured.slug}`} className={styles.architectureFeaturedLink}>
             {architectureFeatured.featuredImage?.node?.sourceUrl ? (
-              <Image
+              <ImageWithFallback
                 src={architectureFeatured.featuredImage.node.sourceUrl}
                 alt={architectureFeatured.title}
                 fill
                 className={styles.architectureFeaturedImage}
                 priority
+                fallback="/images/placeholder.svg"
               />
             ) : (
               <div className="w-full h-full bg-gray-200" />

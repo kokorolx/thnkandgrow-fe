@@ -2,10 +2,16 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import ImageWithFallback from '@/components/ImageWithFallback';
+import { PostContent } from '@/components/PostContent';
 import { getPortfolioProjects, getProjectBySlug, getRelatedProjects } from '@/data/portfolio';
 import PortfolioCard from '@/components/PortfolioCard';
 import StructuredData from '@/components/StructuredData';
 import styles from './page.module.css';
+
+// Static generation for portfolio items
+export const revalidate = 86400; // Revalidate daily
+export const dynamic = 'force-static';
 
 export async function generateStaticParams() {
   const projects = getPortfolioProjects();
@@ -123,11 +129,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         {project.coverImage && (
           <div className={styles.heroImage}>
-            <Image
+            <ImageWithFallback
               src={project.coverImage}
               alt={project.title}
               fill
               priority
+              fallback="/images/placeholder.svg"
             />
           </div>
         )}
@@ -143,9 +150,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
 
-        <div
+        <PostContent
+          content={project.description}
           className={styles.content}
-          dangerouslySetInnerHTML={{ __html: project.description }}
         />
 
         {project.images.length > 0 && (
@@ -154,10 +161,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <div className={styles.galleryGrid}>
               {project.images.map((image, index) => (
                 <div key={index} className={styles.galleryImage}>
-                  <Image
+                  <ImageWithFallback
                     src={image}
                     alt={`${project.title} screenshot ${index + 1}`}
                     fill
+                    fallback="/images/placeholder.svg"
                   />
                 </div>
               ))}

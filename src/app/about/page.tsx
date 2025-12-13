@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 
+// Static generation for about page
+export const revalidate = 604800; // Revalidate weekly
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'About - Le Hoang Tam',
   description: 'Senior Software Developer with 7+ years of experience in Full Stack Development, specializing in Ruby on Rails, Node.js, and AWS.',

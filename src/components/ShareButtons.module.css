@@ -1,0 +1,38 @@
+.socialShare {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.shareButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-color, #1f2937);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0;
+  padding: 0;
+}
+
+.shareButton:hover {
+  background: var(--hover-bg, #f3f4f6);
+  border-color: var(--accent-color, #3b82f6);
+  color: var(--accent-color, #3b82f6);
+}
+
+.shareButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.shareButton:focus-visible {
+  outline: 2px solid var(--accent-color, #3b82f6);
+  outline-offset: 2px;
+}

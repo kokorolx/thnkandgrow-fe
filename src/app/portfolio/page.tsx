@@ -3,6 +3,10 @@ import { getPortfolioProjects } from '@/data/portfolio';
 import PortfolioCard from '@/components/PortfolioCard';
 import styles from './page.module.css';
 
+// Static generation for portfolio listing
+export const revalidate = 604800; // Revalidate weekly
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Portfolio - ThnkAndGrow',
   description: 'Explore my portfolio of web development projects, showcasing modern technologies and best practices.',

@@ -6,11 +6,12 @@ import { calculateReadingTime } from '@/lib/utils';
 import type { Metadata } from 'next';
 import styles from '../../archive.module.css';
 
-// Revalidate every 7 days
+// ISR: Generate static pages with revalidation every 7 days
 export const revalidate = 604800;
 
-// Skip static generation at build time, generate on-demand
-export const dynamic = 'force-dynamic';
+// Use static generation with ISR fallback
+export const dynamic = 'force-static';
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const client = getApolloClient();

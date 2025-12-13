@@ -5,19 +5,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import PostViewTracker from '@/components/PostViewTracker';
-import TextToSpeechReader from '@/components/TextToSpeechReader';
 import StructuredData from '@/components/StructuredData';
+import { TextToSpeechWrapper } from '@/components/TextToSpeechWrapper';
+import { ShareButtons } from '@/components/ShareButtons';
+import ImageWithFallback from '@/components/ImageWithFallback';
+import { PostContent } from '@/components/PostContent';
 import { calculateReadingTime } from '@/lib/utils';
 import styles from './page.module.css';
 
-// Revalidate every 7 days
+// ISR: Generate static pages with revalidation every 7 days
 export const revalidate = 604800;
 
-// Generate other pages on-demand instead of at build time
+// Allow generating new pages on-demand (beyond those generated at build time)
 export const dynamicParams = true;
-
-// Skip static generation at build time, generate on-demand
-export const dynamic = 'force-dynamic';
 
 export async function generateStaticParams() {
   const client = getApolloClient();
@@ -176,28 +176,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           )}
 
           {/* Social Share Icons */}
-          <div className={styles.socialShare}>
-            <a href={`https://www.facebook.com/sharer/sharer.php?u=${typeof window !== 'undefined' ? window.location.href : ''}`} className={styles.shareButton} title="Share on Facebook" target="_blank" rel="noopener noreferrer">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-            </a>
-            <a href={`https://twitter.com/intent/tweet?url=${typeof window !== 'undefined' ? window.location.href : ''}&text=${post.title}`} className={styles.shareButton} title="Share on X" target="_blank" rel="noopener noreferrer">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.165-6.75-5.868 6.75h-3.308l7.73-8.835L2.56 2.25h6.772l4.684 6.201 5.428-6.201zM17.55 19.5h1.827L6.281 4.125H4.25l13.3 15.375z"/>
-              </svg>
-            </a>
-            <a href={`mailto:?subject=${post.title}&body=${typeof window !== 'undefined' ? window.location.href : ''}`} className={styles.shareButton} title="Share via Email">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
-            </a>
-            <button className={styles.shareButton} title="Copy link" onClick={() => navigator.clipboard.writeText(typeof window !== 'undefined' ? window.location.href : '')}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-              </svg>
-            </button>
-          </div>
+          <ShareButtons title={post.title} />
         </div>
       </header>
 
@@ -205,12 +184,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         {post.featuredImage?.node?.sourceUrl && (
           <div className={styles.heroImageWrapper}>
              <div className={styles.heroImageContainer}>
-               <Image
+               <ImageWithFallback
                  src={post.featuredImage.node.sourceUrl}
                  alt={post.featuredImage.node.altText || post.title}
                  fill
                  className={styles.heroImage}
                  priority
+                 fallback="/images/placeholder.svg"
                />
              </div>
           </div>
@@ -223,12 +203,12 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           </div>
 
           {/* Text-to-Speech Reader */}
-          <TextToSpeechReader content={post.content} />
+          <TextToSpeechWrapper content={post.content} />
 
-          {/* Content */}
-          <div
+          {/* Content with image fallback handling */}
+          <PostContent
+            content={post.content}
             className={styles.content}
-            dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
           {/* Tags */}

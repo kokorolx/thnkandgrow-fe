@@ -1,5 +1,9 @@
 import type { Metadata } from 'next';
 
+// Static generation for contact page
+export const revalidate = 604800; // Revalidate weekly
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Contact Us - ThnkAndGrow',
   description: 'Get in touch with the ThnkAndGrow team.',

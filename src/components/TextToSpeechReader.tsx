@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import styles from './TextToSpeechReader.module.css';
 
 interface TextToSpeechReaderProps {
@@ -280,9 +281,7 @@ export default function TextToSpeechReader({ content }: TextToSpeechReaderProps)
                 className={styles.playButton}
                 aria-label="Play"
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M8 5v14l11-7z" fill="currentColor" />
-                </svg>
+                <Image src="/icons/play.svg" alt="Play" width={24} height={24} />
                 <span>Listen to Article</span>
               </button>
             ) : (
@@ -293,9 +292,7 @@ export default function TextToSpeechReader({ content }: TextToSpeechReaderProps)
                     className={styles.controlButton}
                     aria-label="Pause"
                   >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                      <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" fill="currentColor" />
-                    </svg>
+                    <Image src="/icons/pause.svg" alt="Pause" width={20} height={20} />
                   </button>
                 ) : (
                   <button
@@ -303,9 +300,7 @@ export default function TextToSpeechReader({ content }: TextToSpeechReaderProps)
                     className={styles.controlButton}
                     aria-label="Resume"
                   >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                      <path d="M8 5v14l11-7z" fill="currentColor" />
-                    </svg>
+                    <Image src="/icons/play.svg" alt="Resume" width={20} height={20} />
                   </button>
                 )}
                 <button
@@ -313,9 +308,7 @@ export default function TextToSpeechReader({ content }: TextToSpeechReaderProps)
                   className={styles.controlButton}
                   aria-label="Stop"
                 >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <rect x="6" y="6" width="12" height="12" fill="currentColor" />
-                  </svg>
+                  <Image src="/icons/stop.svg" alt="Stop" width={20} height={20} />
                 </button>
               </>
             )}

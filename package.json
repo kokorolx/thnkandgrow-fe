@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev --turbopack -p 9999",
     "build": "next build",
+    "build:standalone": "next build && npm run build:static",
+    "build:static": "next build --experimental-generate-static",
     "start": "next start -p 9999",
+    "start:standalone": "node .next/standalone/server.js",
     "lint": "next lint",
     "cache:download": "ts-node scripts/cache-graphql-data.ts",
     "build:cached": "npm run cache:download && npm run build",

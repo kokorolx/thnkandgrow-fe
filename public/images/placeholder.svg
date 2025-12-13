@@ -1,0 +1,20 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <style>
+      .placeholder-bg { fill: #f3f4f6; }
+      .placeholder-text { fill: #9ca3af; font-size: 16px; font-family: sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .placeholder-icon { fill: #d1d5db; }
+    </style>
+  </defs>
+  
+  <rect class="placeholder-bg" width="400" height="300"/>
+  
+  <!-- Image Icon -->
+  <g class="placeholder-icon">
+    <rect x="80" y="80" width="240" height="180" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="140" cy="120" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M80 220 L150 150 L220 200 L320 80" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <text class="placeholder-text" x="200" y="260">Image Unavailable</text>
+</svg>

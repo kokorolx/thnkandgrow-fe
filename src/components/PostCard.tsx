@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import ImageWithFallback from './ImageWithFallback';
 import styles from './PostCard.module.css';
 
 interface PostCardProps {
@@ -29,12 +30,12 @@ export default function PostCard({ title, excerpt, slug, date, author, coverImag
     <article className={styles.card}>
       <Link href={`/posts/${slug}`} className={styles.imageLink}>
         {coverImage ? (
-          <Image
+          <ImageWithFallback
             src={coverImage}
             alt={title}
             fill
             className={styles.image}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            fallback="/images/placeholder.svg"
           />
         ) : (
           <div className={styles.noImage}>
