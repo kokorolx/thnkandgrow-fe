@@ -6,16 +6,31 @@ import { calculateReadingTime } from '@/lib/utils';
 import type { Metadata } from 'next';
 import styles from '../../archive.module.css';
 
-// ISR: Use on-demand revalidation instead of static generation at build time
-export const revalidate = 3600; // 1 hour
-
-// Allow on-demand generation
-export const dynamicParams = true;
+// Revalidate every hour
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
-  // Return empty array - pages will be generated on-demand
-  // This allows the build to succeed even if GraphQL is unreachable
-  return [];
+  const client = getApolloClient();
+
+  try {
+    const { data } = await client.query({
+      query: GET_TAGS,
+      variables: { first: 100 },
+      context: {
+        fetchOptions: {
+          next: { revalidate: 3600 }
+        }
+      }
+    }) as any;
+
+    return data?.tags?.nodes?.map((tag: any) => ({
+      slug: tag.slug,
+    })) ?? [];
+  } catch (error) {
+    console.error('Error fetching tag slugs for static generation:', error);
+    // Return empty array on error to allow build to continue
+    return [];
+  }
 }
 
 

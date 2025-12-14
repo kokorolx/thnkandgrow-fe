@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
+import { ApolloClient, InMemoryCache, HttpLink, NormalizedCacheObject } from '@apollo/client';
 
 const createApolloClient = (): ApolloClient => {
   const headers: Record<string, string> = {};
@@ -12,21 +12,13 @@ const createApolloClient = (): ApolloClient => {
     uri: process.env.WORDPRESS_API_URL || 'https://blog.thnkandgrow.com/graphql',
     headers: {
       ...headers,
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
       },
-    fetchOptions: {
-      timeout: 10000,
-    },
-    credentials: 'include',
   });
 
   return new ApolloClient({
     link: httpLink,
-    cache: new InMemoryCache({
-      resultCaching: false,
-    }),
+    cache: new InMemoryCache(),
     ssrMode: typeof window === 'undefined',
   });
 };
