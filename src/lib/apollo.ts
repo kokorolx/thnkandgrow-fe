@@ -12,11 +12,14 @@ const createApolloClient = (): ApolloClient => {
     uri: process.env.WORDPRESS_API_URL || 'https://blog.thnkandgrow.com/graphql',
     headers: {
       ...headers,
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
       },
     fetchOptions: {
       timeout: 10000,
     },
+    credentials: 'include',
   });
 
   return new ApolloClient({
