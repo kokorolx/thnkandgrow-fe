@@ -13,33 +13,17 @@ import { PostContent } from '@/components/PostContent';
 import { calculateReadingTime } from '@/lib/utils';
 import styles from './page.module.css';
 
-// ISR: Generate static pages with revalidation every 7 days
-export const revalidate = 604800;
+// ISR: Use on-demand revalidation instead of static generation at build time
+// This prevents build failures when Cloudflare blocks GraphQL requests
+export const revalidate = 3600; // 1 hour
 
 // Allow generating new pages on-demand (beyond those generated at build time)
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  const client = getApolloClient();
-
-  try {
-    const { data } = await client.query({
-      query: GET_ALL_POST_SLUGS,
-      context: {
-        fetchOptions: {
-          next: { revalidate: 604800 }
-        }
-      }
-    }) as any;
-
-    return data?.posts?.nodes?.map((post: any) => ({
-      slug: post.slug,
-    })) ?? [];
-  } catch (error) {
-    console.error('Error fetching post slugs for static generation:', error);
-    // Return empty array on error to allow build to continue
-    return [];
-  }
+  // Return empty array - pages will be generated on-demand
+  // This allows the build to succeed even if GraphQL is unreachable
+  return [];
 }
 
 
